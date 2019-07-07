@@ -2,9 +2,12 @@
 
 namespace DigThemGraves
 {
-    [CreateAssetMenu(fileName = "Grave", menuName = "In-Game-Objects")]
-    public class Grave : ScriptableObject
-    {
-
-    }
+	public abstract class Grave : MonoBehaviour, 
+								  IGrave,
+								  IBuildable
+	{
+		public abstract IGraveActions AvailableActions { get; }
+		public abstract IGraveHealth Health { get; }
+		public abstract void Build();
+	}
 }
