@@ -8,6 +8,10 @@ namespace DigThemGraves
 	{
 		public abstract IGraveActions AvailableActions { get; }
 		public abstract IGraveHealth Health { get; }
-		public abstract void Build();
+        public abstract IBuildSlot OccupiedSlot { get; set; }
+
+        public abstract IBuildSlot TargetedBuildSlot { get; set; }
+
+        public abstract void Build();
 	}
 }

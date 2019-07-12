@@ -27,10 +27,13 @@ public class BuildSlotClickHandler : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
             if (hit.collider != null)
             {
-                if (hit.collider.GetComponent<IBuildSlot>() != null)
+                if (hit.collider.GetComponent<BuildSlot>() != null)
                 {
                     activeSlot.ActiveSlot = hit.collider.GetComponent<BuildSlot>();
                     BuildableMenu.SetActive(true);
+
+                    Vector3 buildSlotPos = Camera.main.WorldToScreenPoint(hit.transform.position);
+                    BuildableMenu.transform.position = new Vector3(buildSlotPos.x, buildSlotPos.y + 100, 0);
                 }
             }
             else

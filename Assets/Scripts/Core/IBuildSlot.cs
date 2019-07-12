@@ -1,7 +1,11 @@
-﻿namespace DigThemGraves
+﻿using System.Collections.Generic;
+
+namespace DigThemGraves
 {
 	public interface IBuildSlot
 	{
 		IBuildable Occupant { get; }
+
+        List<IBuildable> PossibleBuildables { get; }
 	}
 }

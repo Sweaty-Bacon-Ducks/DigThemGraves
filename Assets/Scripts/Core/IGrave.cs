@@ -4,5 +4,6 @@
     {
 		IGraveActions AvailableActions { get; }
 		IGraveHealth Health { get; }
+        IBuildSlot OccupiedSlot { get; set; } 
     }
 }
