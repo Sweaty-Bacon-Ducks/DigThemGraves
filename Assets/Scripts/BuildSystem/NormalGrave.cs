@@ -10,9 +10,9 @@ namespace DigThemGraves
         [SerializeField]
         private ActiveBuildSlot activeSlot;
 
-        public override IGraveActions AvailableActions { get { return AvailableActions; } }
+        public override IActions AvailableActions { get { return AvailableActions; } }
 
-        public override IGraveHealth Health { get { return Health; } }
+        public override IHealth Health { get { return Health; } }
 
         public override IBuildSlot OccupiedSlot
         {

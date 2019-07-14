@@ -2,9 +2,9 @@
 
 namespace DigThemGraves
 {
-	public interface IGraveActions
+	public interface IActions
 	{
-		Dictionary<string, IGraveAction> Actions { get; }
+		Dictionary<string, IBuildAction> Actions { get; }
 		void ExecuteActionWithName(string name);
 	}
 }

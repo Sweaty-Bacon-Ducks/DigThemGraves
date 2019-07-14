@@ -6,6 +6,8 @@ namespace DigThemGraves
 	{
 		IBuildable Occupant { get; }
 
-        List<IBuildable> PossibleBuildables { get; }
+        List<Buildable> PossibleBuildables { get; }
+
+        void OnMouseDown();
 	}
 }

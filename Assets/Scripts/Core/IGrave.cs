@@ -2,8 +2,6 @@
 {
     public interface IGrave
     {
-		IGraveActions AvailableActions { get; }
-		IGraveHealth Health { get; }
-        IBuildSlot OccupiedSlot { get; set; } 
+        IHealth Health { get; }
     }
 }

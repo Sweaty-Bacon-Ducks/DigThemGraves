@@ -4,7 +4,7 @@ using UnityEngine;
 namespace DigThemGraves
 {
 	[Serializable]
-	public class GraveHealth : IGraveHealth
+	public class GraveHealth : IHealth
 	{
 		private int maxHealthValue;
 		private int healthValue;

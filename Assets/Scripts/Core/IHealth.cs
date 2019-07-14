@@ -1,6 +1,6 @@
 ﻿namespace DigThemGraves
 {
-	public interface IGraveHealth
+	public interface IHealth
 	{
 		int MaxHealthValue { get; }
 		int HealthValue { get; }
