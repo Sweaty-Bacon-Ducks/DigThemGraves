@@ -1,44 +1,21 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
-public class PlayerContoller : MonoBehaviour
+namespace DigThemGraves
 {
-    private Rigidbody2D rb;
-    [SerializeField]
-    private string horizontalAxisName;
-    [SerializeField]
-    private string verticalAxisName;
-    [SerializeField]
-    private float acceleration;
-
-    public float Acceleration { get => acceleration; set => acceleration = value; }
-
-    void Awake()
+    public class PlayerContoller : MonoBehaviour
     {
-        rb = GetComponent<Rigidbody2D>();
-    }
+        private IPlayer currentPlayer;
 
-    void Update()
-    {
-        var horizontalInput = Input.GetAxis(horizontalAxisName);
-        var verticalInput = Input.GetAxis(verticalAxisName);
-        var inputVector = new Vector2(horizontalInput, verticalInput).normalized;
-
-        if (inputVector.magnitude > 0)
+        private void Awake()
         {
-            rb.AddForce(acceleration * (new Vector2(horizontalInput, verticalInput).normalized));
-        }
-        else
-        {
-            if (rb.velocity.magnitude >= 0.05f)
-            {
-                rb.AddForce(-acceleration * rb.velocity.normalized);
-            }
-            else
-            {
-                rb.velocity = Vector2.zero;
-            }
+            currentPlayer = GetComponent<IPlayer>();
         }
 
+        private void Update()
+        {
+            currentPlayer.ExecuteAllActions();
+        }
     }
 }
+
+
