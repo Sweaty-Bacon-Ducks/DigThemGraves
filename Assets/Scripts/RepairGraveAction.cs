@@ -17,9 +17,9 @@ namespace DigThemGraves
 			}
 		}
 
-		public override void Execute(IBuildable buildable) // IGrave graveContext
+		public override void Execute(IGrave graveContext)
         {
-            //buildable.Health.Heal(repairAmmount);  // graveContext.Health.Heal(repairAmmount);
+            graveContext.Health.Heal(repairAmmount);
         }
 	}
 }

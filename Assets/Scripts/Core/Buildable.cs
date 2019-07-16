@@ -9,7 +9,7 @@ namespace DigThemGraves
         public abstract IActions AvailableActions { get; }
         public abstract IBuildSlot OccupiedSlot { get; set; }
 
-        public abstract IBuildSlot TargetedBuildSlot { get; set; }
+        public abstract BuildSlot TargetedBuildSlot { get; set; }
 
         public abstract void Build();
     }

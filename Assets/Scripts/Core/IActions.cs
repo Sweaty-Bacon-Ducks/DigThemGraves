@@ -4,7 +4,7 @@ namespace DigThemGraves
 {
 	public interface IActions
 	{
-		Dictionary<string, IBuildAction> Actions { get; }
-		void ExecuteActionWithName(string name);
+		//Dictionary<string, IAction> Actions { get; }
+		void ExecuteActionWithName(string namesy);
 	}
 }

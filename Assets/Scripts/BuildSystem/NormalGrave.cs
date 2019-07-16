@@ -7,28 +7,27 @@ namespace DigThemGraves
         [SerializeField]
         private Sprite sprite;
 
-        [SerializeField]
-        private ActiveBuildSlot activeSlot;
-
         public override IActions AvailableActions { get { return AvailableActions; } }
-
         public override IHealth Health { get { return Health; } }
 
+        private IBuildSlot occupiedSlot;
         public override IBuildSlot OccupiedSlot
         {
-            get { return OccupiedSlot; }
-            set { OccupiedSlot = value; }
+            get { return occupiedSlot; }
+            set { occupiedSlot = value; }
         }
 
-        public override IBuildSlot TargetedBuildSlot
+        private BuildSlot targetedBuildSlot;
+        public override BuildSlot TargetedBuildSlot
         {
-            get { return TargetedBuildSlot; }
-            set { TargetedBuildSlot = value; }
+            get { return targetedBuildSlot; }
+            set { targetedBuildSlot = value; }
         }
 
         public override void Build()
         {
-            activeSlot.ActiveSlot.GetComponent<SpriteRenderer>().sprite = sprite;
+            TargetedBuildSlot.GetComponent<SpriteRenderer>().sprite = sprite;
+            OccupiedSlot = TargetedBuildSlot;
         }
     }
 }

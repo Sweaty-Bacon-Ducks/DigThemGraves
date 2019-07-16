@@ -15,7 +15,7 @@ namespace DigThemGraves
 			}
 		}
 
-		public override void Execute(IBuildable buildable)
+		public override void Execute(IGrave graveContext)
 		{
 			
 		}
