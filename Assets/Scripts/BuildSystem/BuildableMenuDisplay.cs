@@ -6,7 +6,7 @@ namespace DigThemGraves
 {
     // TODO: 
     // Wyłączanie menu, jeśli gracz kliknął poza BuildSlot
-    // Wyświetlanie więcej niż jednej opcji.
+    // Dokładniejsze dostosowanie wielkości menu scrollowania do ilości przycisków
     public class BuildableMenuDisplay : MonoBehaviour
     {
         [SerializeField]
@@ -40,6 +40,17 @@ namespace DigThemGraves
                 newBuildable.transform.SetParent(buttonsParent);
                 newBuildable.TargetedBuildSlot = targetedBuildSlot;
             }
+
+            // Create scrollable menu appropriate for number of buildables
+            RectTransform buildableMenuRect = buttonsParent.parent.GetComponent<RectTransform>();
+            RectTransform buttonsParentRect = buttonsParent.GetComponent<RectTransform>();
+
+            buttonsParentRect.sizeDelta = new Vector2(buildableMenuRect.rect.width * possibleBuildables.Count, 
+                                                      buildableMenuRect.rect.height);
+
+            buttonsParentRect.position = new Vector3(buildableMenuRect.position.x + buildableMenuRect.rect.width * possibleBuildables.Count,  
+                                                     buttonsParentRect.position.y, 
+                                                     buttonsParentRect.position.z);
         }
 
         private void ShowMenu()

@@ -701,6 +701,9 @@ MonoBehaviour:
   possibleBuildables:
   - {fileID: 53895107766559849, guid: ba936c2af188e5743a755f921af7c9a3, type: 3}
   - {fileID: 53895107766559849, guid: ba936c2af188e5743a755f921af7c9a3, type: 3}
+  - {fileID: 53895107766559849, guid: ba936c2af188e5743a755f921af7c9a3, type: 3}
+  - {fileID: 53895107766559849, guid: ba936c2af188e5743a755f921af7c9a3, type: 3}
+  - {fileID: 53895107766559849, guid: ba936c2af188e5743a755f921af7c9a3, type: 3}
 --- !u!61 &921362959
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1321,8 +1324,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 77.84, y: 30.15}
-  m_SizeDelta: {x: 155.69, y: 60.3}
+  m_AnchoredPosition: {x: 42.257, y: 30.15}
+  m_SizeDelta: {x: 84.525, y: 60.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2012971536
 MonoBehaviour:
