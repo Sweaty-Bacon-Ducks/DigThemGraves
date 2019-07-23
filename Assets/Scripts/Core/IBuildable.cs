@@ -1,7 +1,10 @@
 ﻿namespace DigThemGraves
 {
-	public interface IBuildable
+    public interface IBuildable
 	{
-		void Build();
-	}
+        IActions AvailableActions { get; }
+        IBuildSlot OccupiedSlot { get; set; }
+        BuildSlot TargetedBuildSlot { get; set; }
+        void Build();
+    }
 }

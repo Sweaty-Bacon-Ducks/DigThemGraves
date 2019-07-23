@@ -2,7 +2,6 @@
 {
     public interface IGrave
     {
-		IGraveActions AvailableActions { get; }
-		IGraveHealth Health { get; }
+        IHealth Health { get; }
     }
 }

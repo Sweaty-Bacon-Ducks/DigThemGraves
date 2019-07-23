@@ -2,10 +2,10 @@
 
 namespace DigThemGraves
 {
-	public abstract class GraveAction : ScriptableObject, IGraveAction
+	public abstract class GraveAction : ScriptableObject, IAction<IGrave>
 	{
 		public abstract string Name { get; }
 
-		public abstract void Execute(IGrave graveContext);
-	}
+        public abstract void Execute(IGrave graveContext);
+    }
 }

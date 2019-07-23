@@ -18,8 +18,8 @@ namespace DigThemGraves
 		}
 
 		public override void Execute(IGrave graveContext)
-		{
-			graveContext.Health.Heal(repairAmmount);
-		}
+        {
+            graveContext.Health.Heal(repairAmmount);
+        }
 	}
 }

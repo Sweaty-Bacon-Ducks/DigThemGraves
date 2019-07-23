@@ -4,7 +4,7 @@ using UnityEngine;
 namespace DigThemGraves
 {
 	[Serializable]
-	public class GraveHealth : IGraveHealth
+	public class GraveHealth : IHealth
 	{
 		private int maxHealthValue;
 		private int healthValue;
@@ -18,16 +18,16 @@ namespace DigThemGraves
 
 		public int MaxHealthValue { get { return maxHealthValue; } }
 
-		public void Damage(int ammount)
+		public void Damage(int amount)
 		{
-			ammount = Math.Max(0, ammount);
-			healthValue = Math.Max(0, healthValue - ammount);
+			amount = Math.Max(0, amount);
+			healthValue = Math.Max(0, healthValue - amount);
 		}
 
-		public void Heal(int ammount)
+		public void Heal(int amount)
 		{
-			ammount = Math.Min(maxHealthValue, ammount);
-			healthValue = Math.Min(MaxHealthValue, healthValue + ammount);
+			amount = Math.Min(maxHealthValue, amount);
+			healthValue = Math.Min(MaxHealthValue, healthValue + amount);
 		}
 	}
 }
