@@ -1,11 +1,10 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace DigThemGraves
 {
-    public interface IAction<T>
+    public interface IAction
     {
-        void Execute(T actionContext);
+        void Execute(GameObject target);
+        bool IsFinished { get; set; }
     }
 }

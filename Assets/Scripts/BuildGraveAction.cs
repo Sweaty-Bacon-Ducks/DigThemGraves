@@ -2,17 +2,17 @@
 
 namespace DigThemGraves
 {
-	public class TearDownGraveAction : Action
-	{
-		[SerializeField]
-		private string actionName;
-		public override string Name
-		{
-			get
-			{
-				return actionName;
-			}
-		}
+    public class BuildGraveAction : Action
+    {
+        [SerializeField]
+        private string actionName;
+        public override string Name
+        {
+            get
+            {
+                return actionName;
+            }
+        }
 
         private bool isFinished;
         public override bool IsFinished
@@ -28,8 +28,9 @@ namespace DigThemGraves
         }
 
         public override void Execute(GameObject target)
-		{
-			
-		}
-	}
+        {
+            target.GetComponent<Buildable>().Build();
+            IsFinished = true;
+        }
+    }
 }
