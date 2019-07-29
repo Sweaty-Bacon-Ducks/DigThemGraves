@@ -4,7 +4,7 @@ namespace DigThemGraves
 {
     public interface IAction
     {
-        void Execute(GameObject target);
+        void Execute();
         bool IsFinished { get; set; }
     }
 }

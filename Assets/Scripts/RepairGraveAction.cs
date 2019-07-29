@@ -8,7 +8,10 @@ namespace DigThemGraves
 		private int repairAmmount;
 		[SerializeField]
 		private string actionName;
-		public override string Name
+
+        private GameObject target;
+
+        public override string Name
 		{
 			get
 			{
@@ -29,8 +32,14 @@ namespace DigThemGraves
             }
         }
 
-        public override void Execute(GameObject target)
+        public RepairGraveAction(GameObject target)
         {
+            this.target = target;
+        }
+
+        public override void Execute()
+        {
+            Debug.Log("Repairing grave");
             target.GetComponent<IGrave>().Health.Heal(repairAmmount);
         }
 	}

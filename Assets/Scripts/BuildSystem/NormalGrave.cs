@@ -26,18 +26,7 @@ namespace DigThemGraves
 
         public override void Build()
         {
-            ActionQueue actionQueue = GameObject.FindGameObjectWithTag("GameManager").GetComponent<ActionQueue>();
 
-            if(actionQueue.IsEmpty())
-            {
-                TargetedBuildSlot.GetComponent<SpriteRenderer>().sprite = sprite;
-
-                actionQueue.Target = TargetedBuildSlot.gameObject;
-                actionQueue.actionList.Enqueue(new WalkingAction());
-                actionQueue.actionList.Enqueue(new BuildGraveAction());
-
-                OccupiedSlot = TargetedBuildSlot;
-            }
         }
     }
 }

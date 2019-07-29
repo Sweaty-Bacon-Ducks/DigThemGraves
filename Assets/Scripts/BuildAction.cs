@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
-using UnityEngine.AI;
 
 namespace DigThemGraves
 {
-    public class WalkingAction : Action
+    public class BuildAction : Action
     {
         [SerializeField]
         private string actionName;
+
+        private GameObject target;
+
         public override string Name
         {
             get
@@ -20,7 +22,7 @@ namespace DigThemGraves
         {
             get
             {
-                return agent.remainingDistance < 1;
+                return isFinished;
             }
             set
             {
@@ -28,19 +30,16 @@ namespace DigThemGraves
             }
         }
 
-        private NavMeshAgent agent;
-        private Vector3 objectivePos;
-
-        public override void Execute(GameObject target)
+        public BuildAction(GameObject target)
         {
-            agent = target.GetComponent<NavMeshAgent>();
-            objectivePos = target.transform.position;
-            WalkToTarget();
+            this.target = target;
         }
 
-        public void WalkToTarget()
+        public override void Execute()
         {
-            agent.SetDestination(objectivePos);
+            Debug.Log("Building grave");
+            target.GetComponent<Buildable>().Build();
+            IsFinished = true;
         }
     }
 }

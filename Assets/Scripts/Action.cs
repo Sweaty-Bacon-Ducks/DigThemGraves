@@ -8,6 +8,6 @@ namespace DigThemGraves
 
         public abstract bool IsFinished { get; set; }
 
-        public abstract void Execute(GameObject target);
+        public abstract void Execute();
     }
 }
