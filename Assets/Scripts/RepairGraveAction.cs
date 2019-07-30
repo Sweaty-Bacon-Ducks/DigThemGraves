@@ -2,14 +2,16 @@
 
 namespace DigThemGraves
 {
-	[CreateAssetMenu(menuName = "InGame", fileName = "RepairGraveAction")]
-	public class RepairGraveAction : GraveAction
+	public class RepairGraveAction : Action
 	{
 		[SerializeField]
 		private int repairAmmount;
 		[SerializeField]
 		private string actionName;
-		public override string Name
+
+        private GameObject target;
+
+        public override string Name
 		{
 			get
 			{
@@ -17,9 +19,28 @@ namespace DigThemGraves
 			}
 		}
 
-		public override void Execute(IGrave graveContext)
+        private bool isFinished;
+        public override bool IsFinished
         {
-            graveContext.Health.Heal(repairAmmount);
+            get
+            {
+                return isFinished;
+            }
+            set
+            {
+                isFinished = value;
+            }
+        }
+
+        public RepairGraveAction(GameObject target)
+        {
+            this.target = target;
+        }
+
+        public override void Execute()
+        {
+            Debug.Log("Repairing grave");
+            target.GetComponent<IGrave>().Health.Heal(repairAmmount);
         }
 	}
 }

@@ -26,8 +26,7 @@ namespace DigThemGraves
 
         public override void Build()
         {
-            TargetedBuildSlot.GetComponent<SpriteRenderer>().sprite = sprite;
-            OccupiedSlot = TargetedBuildSlot;
+
         }
     }
 }
