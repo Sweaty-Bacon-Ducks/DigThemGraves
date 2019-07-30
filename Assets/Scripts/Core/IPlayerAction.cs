@@ -3,5 +3,6 @@ namespace DigThemGraves
 {
     public interface IPlayerAction : IAction<IPlayer>
     {
+
     }
 }

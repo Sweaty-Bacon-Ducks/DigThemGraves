@@ -11,7 +11,7 @@ namespace DigThemGraves
 
         public void ExecuteAllActions()
         {
-            foreach (var action in AvailableActions)
+			foreach (var action in AvailableActions)
             {
                 action.Execute(this);
             }

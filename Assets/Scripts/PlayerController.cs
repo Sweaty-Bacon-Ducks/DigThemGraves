@@ -2,7 +2,7 @@
 
 namespace DigThemGraves
 {
-    public class PlayerContoller : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
         private IPlayer currentPlayer;
 
@@ -17,5 +17,3 @@ namespace DigThemGraves
         }
     }
 }
-
-

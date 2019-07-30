@@ -10,11 +10,11 @@
 #if UNITY_ANDROID
             return new PinchZoom(Sensitivity);
 #endif
-#if UNITY_IOS
-            throw new PlatformNotSupportedException("Current build target: IOS");
+#if UNITY_EDITOR
+			return new MouseWheelZoom(Sensitivity);
 #else
-            return new MouseWheelZoom(Sensitivity);
+           throw new PlatformNotSupportedException;
 #endif
-        }
-    }
+		}
+	}
 }
