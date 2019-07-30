@@ -12,6 +12,8 @@ namespace DigThemGraves
 		private float zOffset;
 		private InputClick clickGateway;
 
+		public override bool IsFinished { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+
 		public void Awake()
 		{
 			clickGateway = InputClick.Create();
@@ -21,7 +23,7 @@ namespace DigThemGraves
 		{
             target = target2.transform.position;
 		}
-		public override void Execute(IPlayer actionContext)
+		public override void Execute()
 		{
 			var clickData = clickGateway.ClickPoint;
 			if (clickData.Clicked)

@@ -2,23 +2,15 @@
 
 namespace DigThemGraves
 {
-	public class TearDownGraveAction : Action
+	public class TearDownGraveAction : IAction
 	{
 		[SerializeField]
 		private string actionName;
 
         private GameObject target;
 
-        public override string Name
-		{
-			get
-			{
-				return actionName;
-			}
-		}
-
         private bool isFinished;
-        public override bool IsFinished
+        public bool IsFinished
         {
             get
             {
@@ -35,7 +27,7 @@ namespace DigThemGraves
             this.target = target;
         }
 
-        public override void Execute()
+        public void Execute()
 		{
             Debug.Log("Tearing grave");
 		}

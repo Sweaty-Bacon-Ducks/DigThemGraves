@@ -2,14 +2,14 @@
 
 namespace DigThemGraves
 {
-    public class BuildAction : Action
+    public class BuildAction : IAction
     {
         [SerializeField]
         private string actionName;
 
         private GameObject target;
 
-        public override string Name
+        public string Name
         {
             get
             {
@@ -18,7 +18,7 @@ namespace DigThemGraves
         }
 
         private bool isFinished;
-        public override bool IsFinished
+        public bool IsFinished
         {
             get
             {
@@ -35,7 +35,7 @@ namespace DigThemGraves
             this.target = target;
         }
 
-        public override void Execute()
+        public void Execute()
         {
             Debug.Log("Building grave");
             target.GetComponent<Buildable>().Build();

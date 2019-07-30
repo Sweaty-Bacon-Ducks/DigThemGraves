@@ -4,7 +4,8 @@ namespace DigThemGraves
 {
     public abstract class ScriptablePlayerAction : ScriptableObject, IPlayerAction
     {
-        public abstract void Execute(IPlayer actionContext);
-    }
+		public abstract bool IsFinished { get; set; }
+		public abstract void Execute();
+	}
 }
 

@@ -2,8 +2,8 @@
 
 namespace DigThemGraves
 {
-    public interface IActionCollection<T>
+    public interface IActionCollection
     {
-        ICollection<IAction<T>> Actions { get; }
+        ICollection<IAction> Actions { get; }
     }
 }

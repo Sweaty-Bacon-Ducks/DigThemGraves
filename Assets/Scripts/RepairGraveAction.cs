@@ -2,7 +2,7 @@
 
 namespace DigThemGraves
 {
-	public class RepairGraveAction : Action
+	public class RepairGraveAction : IAction
 	{
 		[SerializeField]
 		private int repairAmmount;
@@ -11,16 +11,9 @@ namespace DigThemGraves
 
         private GameObject target;
 
-        public override string Name
-		{
-			get
-			{
-				return actionName;
-			}
-		}
 
         private bool isFinished;
-        public override bool IsFinished
+        public bool IsFinished
         {
             get
             {
@@ -37,7 +30,7 @@ namespace DigThemGraves
             this.target = target;
         }
 
-        public override void Execute()
+        public void Execute()
         {
             Debug.Log("Repairing grave");
             target.GetComponent<IGrave>().Health.Heal(repairAmmount);
