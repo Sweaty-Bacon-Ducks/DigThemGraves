@@ -9,6 +9,8 @@ namespace DigThemGraves
 
         private GameObject target;
 
+        private Sprite sprite;
+
         public string Name
         {
             get
@@ -30,15 +32,29 @@ namespace DigThemGraves
             }
         }
 
-        public BuildAction(GameObject target)
+        public Sprite Sprite
+        {
+            get
+            {
+                return sprite;
+            }
+            set
+            {
+                sprite = value;
+            }
+        }
+
+        public BuildAction(GameObject target, Sprite sprite)
         {
             this.target = target;
+            this.sprite = sprite;
         }
 
         public void Execute()
         {
+            Debug.Log("Tu pewnie chodzenie");
             Debug.Log("Building grave");
-            target.GetComponent<Buildable>().Build();
+            target.GetComponent<SpriteRenderer>().sprite = sprite;
             IsFinished = true;
         }
     }

@@ -1,16 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using UnityEngine;
 
 namespace DigThemGraves
 {
-	public class TearDownGraveAction : IAction
-	{
-		[SerializeField]
-		private string actionName;
-
-        private GameObject target;
-
-        private Sprite sprite;
-
+    public class TEMPWaitingAction : IAction
+    {
         private bool isFinished;
         public bool IsFinished
         {
@@ -24,6 +20,7 @@ namespace DigThemGraves
             }
         }
 
+        private Sprite sprite;
         public Sprite Sprite
         {
             get
@@ -36,15 +33,15 @@ namespace DigThemGraves
             }
         }
 
-        public TearDownGraveAction(GameObject target)
+        public TEMPWaitingAction(Sprite sprite)
         {
-            this.target = target;
+            this.Sprite = sprite;
         }
 
         public void Execute()
-		{
-            Debug.Log("Tu pewnie chodzenie");
-            Debug.Log("Tearing grave");
-		}
-	}
+        {
+            Task.Delay(2000);
+            IsFinished = true;
+        }
+    }
 }
