@@ -26,7 +26,17 @@ namespace DigThemGraves
 
         public override void Build()
         {
+            ActionQueue actionQueue = GameObject.FindGameObjectWithTag("GameManager").GetComponent<ActionQueue>();
 
+            TargetedBuildSlot.GetComponent<SpriteRenderer>().sprite = sprite;
+
+            //actionQueue.actionList.AddLast(new BuildAction(TargetedBuildSlot.gameObject, sprite));
+            actionQueue.AddAction(new BuildAction(TargetedBuildSlot.gameObject, sprite));
+            actionQueue.AddAction(new TEMPWaitingAction(sprite));
+            actionQueue.AddAction(new TEMPWaitingAction(sprite));
+            actionQueue.AddAction(new TEMPWaitingAction(sprite));
+
+            OccupiedSlot = TargetedBuildSlot;
         }
     }
 }

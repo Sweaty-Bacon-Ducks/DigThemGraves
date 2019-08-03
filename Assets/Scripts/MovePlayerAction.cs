@@ -14,7 +14,20 @@ namespace DigThemGraves
 
 		public override bool IsFinished { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
-		public void Awake()
+        private Sprite sprite;
+        public override Sprite Sprite
+        {
+            get
+            {
+                return sprite;
+            }
+            set
+            {
+                sprite = value;
+            }
+        }
+
+        public void Awake()
 		{
 			clickGateway = InputClick.Create();
 		}
