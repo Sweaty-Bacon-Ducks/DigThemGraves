@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace DigThemGraves
 {
-    public class ActionQueue : MonoBehaviour
+    public class ActionQueue : Queue
     {
         private LinkedList<ActionModel> actionList = new LinkedList<ActionModel>();
         private IAction currentAction = null;
@@ -43,7 +43,7 @@ namespace DigThemGraves
             }
         }
 
-        public void AddAction(IAction action)
+        public override void AddAction(IAction action)
         {
             GameObject newActionIcon = Instantiate(actionIcon, actionMenu.transform);
             ActionDisplay actionInstance = newActionIcon.GetComponent<ActionDisplay>();
@@ -51,7 +51,7 @@ namespace DigThemGraves
             actionList.AddLast(new ActionModel(action, actionInstance));
         }
 
-        public void RemoveAction(IAction action)
+        public override void RemoveAction(IAction action)
         {
             ActionModel actionWTF = actionList.Where(x => x.Action == action).FirstOrDefault();
             actionList.Remove(actionWTF);
