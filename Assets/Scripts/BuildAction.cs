@@ -52,8 +52,6 @@ namespace DigThemGraves
 
         public void Execute()
         {
-            Debug.Log("Tu pewnie chodzenie");
-            Debug.Log("Building grave");
             target.GetComponent<SpriteRenderer>().sprite = sprite;
             IsFinished = true;
         }

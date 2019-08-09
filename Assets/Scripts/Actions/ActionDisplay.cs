@@ -6,9 +6,9 @@ using UnityEngine.UI;
 namespace DigThemGraves
 {
     /// <summary>
-    /// Class represents icon in action queue
+    /// Class represents clickable icon in action queue
     /// </summary>
-    public class ActionInstance : MonoBehaviour
+    public class ActionDisplay : MonoBehaviour
     {
         public IAction action;
 
@@ -21,10 +21,7 @@ namespace DigThemGraves
         public void OnClicked()
         {
             ActionQueue actionQueue = GameObject.FindGameObjectWithTag("GameManager").GetComponent<ActionQueue>();
-
             actionQueue.RemoveAction(action);
-
-            Destroy(gameObject);
         }
     }
 }

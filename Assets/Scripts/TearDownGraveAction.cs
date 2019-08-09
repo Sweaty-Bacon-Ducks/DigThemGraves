@@ -43,8 +43,7 @@ namespace DigThemGraves
 
         public void Execute()
 		{
-            Debug.Log("Tu pewnie chodzenie");
-            Debug.Log("Tearing grave");
+
 		}
 	}
 }

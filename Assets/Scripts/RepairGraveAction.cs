@@ -45,8 +45,6 @@ namespace DigThemGraves
 
         public void Execute()
         {
-            Debug.Log("Tu pewnie chodzenie");
-            Debug.Log("Repairing grave");
             target.GetComponent<IGrave>().Health.Heal(repairAmmount);
         }
 	}

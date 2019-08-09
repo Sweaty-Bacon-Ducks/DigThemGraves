@@ -7,7 +7,7 @@ namespace DigThemGraves
 {
     public class ActionQueue : MonoBehaviour
     {
-        private LinkedList<ActionWTF> actionList = new LinkedList<ActionWTF>();
+        private LinkedList<ActionModel> actionList = new LinkedList<ActionModel>();
         private IAction currentAction = null;
 
         [SerializeField]
@@ -28,28 +28,32 @@ namespace DigThemGraves
 
         private void UpdateActions()
         {
-            if (!IsEmpty())
+            if (currentAction == null)
             {
-                if (currentAction == null || currentAction.IsFinished)
+                if (!IsEmpty())
                 {
                     currentAction = actionList.First.Value.Action;
-                    actionList.RemoveFirst();
                     currentAction.Execute();
                 }
+            }
+            else if (currentAction.IsFinished)
+            {
+                RemoveAction(currentAction);
+                currentAction = null;
             }
         }
 
         public void AddAction(IAction action)
         {
             GameObject newActionIcon = Instantiate(actionIcon, actionMenu.transform);
-            ActionInstance actionInstance = newActionIcon.GetComponent<ActionInstance>();
+            ActionDisplay actionInstance = newActionIcon.GetComponent<ActionDisplay>();
             actionInstance.Load(action);
-            actionList.AddLast(new ActionWTF(action, actionInstance));
+            actionList.AddLast(new ActionModel(action, actionInstance));
         }
 
         public void RemoveAction(IAction action)
         {
-            ActionWTF actionWTF = actionList.Where(x => x.Action == action).FirstOrDefault();
+            ActionModel actionWTF = actionList.Where(x => x.Action == action).FirstOrDefault();
             actionList.Remove(actionWTF);
             Destroy(actionWTF.ActionInstance.gameObject);
         }

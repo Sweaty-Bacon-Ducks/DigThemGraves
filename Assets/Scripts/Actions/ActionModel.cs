@@ -4,12 +4,12 @@ using UnityEngine;
 
 namespace DigThemGraves
 {
-    public class ActionWTF
+    public class ActionModel
     {
         public IAction Action;
-        public ActionInstance ActionInstance;
+        public ActionDisplay ActionInstance;
 
-        public ActionWTF(IAction action, ActionInstance actionInstance)
+        public ActionModel(IAction action, ActionDisplay actionInstance)
         {
             this.Action = action;
             this.ActionInstance = actionInstance;
