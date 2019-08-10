@@ -120,6 +120,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!20 &172804245 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5131438646583401178, guid: d4fbb31416728ce4aba1f500c4a83ee8,
+    type: 3}
+  m_PrefabInstance: {fileID: 5131438646704106996}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &667048323
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +208,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &849778917
 Transform:
@@ -1324,7 +1330,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1313660383
 Transform:
@@ -1540,7 +1546,7 @@ CompositeCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_GeometryType: 1
+  m_GeometryType: 0
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
@@ -1701,7 +1707,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!156049354 &1893459317
 Grid:
@@ -1778,6 +1784,7 @@ GameObject:
   - component: {fileID: 2046239483}
   - component: {fileID: 2046239482}
   - component: {fileID: 2046239484}
+  - component: {fileID: 2046239487}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1953,6 +1960,24 @@ MonoBehaviour:
   availableActions:
     actions:
     - {fileID: 0}
+--- !u!114 &2046239487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046239477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9c513551b6d3546a13e8f4e60cc061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2041536020}
+  playerCamera: {fileID: 172804245}
+  zOffset: 0
+  invalidWalkingLayers:
+    serializedVersion: 2
+    m_Bits: 512
 --- !u!1001 &5131438646704106996
 PrefabInstance:
   m_ObjectHideFlags: 0
