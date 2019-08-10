@@ -44,15 +44,22 @@ namespace DigThemGraves
 			var clickData = clickGateway.ClickPoint;
 			if (clickData.Clicked)
 			{
-				if (ValidWalkingTerrain(clickData.OnScreenClickPoint))
+				var worldClickPosition = playerCamera.ScreenToWorldPoint(clickData.OnScreenClickPoint);
+				if (ValidWalkingTerrain(worldClickPosition))
 				{
-					var worldClickPosition = playerCamera.ScreenToWorldPoint(clickData.OnScreenClickPoint);
 					worldClickPosition.z = zOffset;
 					target.position = worldClickPosition;
 				}
 			}
 		}
 
+		private bool ValidWalkingTerrain(Vector2 point)
+		{
+			var foundCollider = Physics2D.OverlapPoint(point,
+													   invalidWalkingLayers);
+			return foundCollider == null;
+		}
+	}
         public override void Cancel()
         {
 
