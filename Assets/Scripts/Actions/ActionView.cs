@@ -8,7 +8,7 @@ namespace DigThemGraves
     /// <summary>
     /// Class represents clickable icon in action queue
     /// </summary>
-    public class ActionDisplay : MonoBehaviour
+    public class ActionView : MonoBehaviour
     {
         public IAction action;
 

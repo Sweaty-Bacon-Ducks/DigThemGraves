@@ -46,7 +46,7 @@ namespace DigThemGraves
         public override void AddAction(IAction action)
         {
             GameObject newActionIcon = Instantiate(actionIcon, actionMenu.transform);
-            ActionDisplay actionInstance = newActionIcon.GetComponent<ActionDisplay>();
+            ActionView actionInstance = newActionIcon.GetComponent<ActionView>();
             actionInstance.Load(action);
             actionList.AddLast(new ActionModel(action, actionInstance));
         }

@@ -7,9 +7,9 @@ namespace DigThemGraves
     public class ActionModel
     {
         public IAction Action;
-        public ActionDisplay ActionInstance;
+        public ActionView ActionInstance;
 
-        public ActionModel(IAction action, ActionDisplay actionInstance)
+        public ActionModel(IAction action, ActionView actionInstance)
         {
             this.Action = action;
             this.ActionInstance = actionInstance;
