@@ -9,6 +9,6 @@ namespace DigThemGraves
 
         public abstract List<Buildable> PossibleBuildables { get; }
 
-        public abstract void OnMouseDown();
+        public abstract void OnMouseUp();
     }
 }

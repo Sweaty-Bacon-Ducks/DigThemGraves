@@ -8,6 +8,6 @@ namespace DigThemGraves
 
         List<Buildable> PossibleBuildables { get; }
 
-        void OnMouseDown();
+        void OnMouseUp();
 	}
 }

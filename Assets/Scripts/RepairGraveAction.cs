@@ -46,6 +46,12 @@ namespace DigThemGraves
         public void Execute()
         {
             target.GetComponent<IGrave>().Health.Heal(repairAmmount);
+            isFinished = true;
         }
-	}
+
+        public void Cancel()
+        {
+            
+        }
+    }
 }

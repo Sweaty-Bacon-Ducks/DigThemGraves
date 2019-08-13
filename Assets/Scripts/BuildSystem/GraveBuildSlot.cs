@@ -18,7 +18,7 @@ namespace DigThemGraves
             get { return possibleBuildables; }
         }
 
-        public override void OnMouseDown()
+        public override void OnMouseUp()
         {
             buildableMenuDisplay.ActivateMenu(possibleBuildables, this);
         }

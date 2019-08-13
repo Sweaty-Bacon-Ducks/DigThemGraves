@@ -7,7 +7,12 @@ namespace DigThemGraves
 		public abstract bool IsFinished { get; set; }
 
         public abstract Sprite Sprite { get; set; }
-		public abstract void Execute();
+
+        public void Cancel()
+        {
+        }
+
+        public abstract void Execute();
 	}
 }
 

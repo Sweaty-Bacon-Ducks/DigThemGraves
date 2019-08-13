@@ -55,5 +55,10 @@ namespace DigThemGraves
             target.GetComponent<SpriteRenderer>().sprite = sprite;
             IsFinished = true;
         }
+
+        public void Cancel()
+        {
+
+        }
     }
 }

@@ -7,5 +7,7 @@ namespace DigThemGraves
         Sprite Sprite { get; set; }
         void Execute();
         bool IsFinished { get; set; }
+
+        void Cancel();
     }
 }

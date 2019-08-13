@@ -43,7 +43,12 @@ namespace DigThemGraves
 
         public void Execute()
 		{
-
+            isFinished = true;
 		}
-	}
+
+        public void Cancel()
+        {
+
+        }
+    }
 }
