@@ -9,11 +9,10 @@
         {
 #if UNITY_ANDROID
             return new PinchZoom(Sensitivity);
-#endif
-#if UNITY_EDITOR
+#elif UNITY_EDITOR
 			return new MouseWheelZoom(Sensitivity);
 #else
-           throw new PlatformNotSupportedException;
+           throw new PlatformNotSupportedException();
 #endif
 		}
 	}

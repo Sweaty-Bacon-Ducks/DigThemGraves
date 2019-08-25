@@ -28,11 +28,10 @@ namespace DigThemGraves
 		{
 #if UNITY_ANDROID
 			return new TouchClick();
-#endif
-#if UNITY_EDITOR
-			return new MouseClick();
+#elif UNITY_EDITOR
+            return new LeftMouseButtonClick();
 #else
-           throw new PlatformNotSupportedException;
+           throw new PlatformNotSupportedException();
 #endif
 		}
 	}
