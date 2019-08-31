@@ -53,9 +53,9 @@ namespace DigThemGraves
 
         public override void RemoveAction(IAction action)
         {
-            ActionModel actionWTF = actionList.Where(x => x.Action == action).FirstOrDefault();
-            actionList.Remove(actionWTF);
-            Destroy(actionWTF.ActionInstance.gameObject);
+            ActionModel actionModel = actionList.Where(x => x.Action == action).FirstOrDefault();
+            actionList.Remove(actionModel);
+            Destroy(actionModel.ActionInstance.gameObject);
         }
     }
 }
