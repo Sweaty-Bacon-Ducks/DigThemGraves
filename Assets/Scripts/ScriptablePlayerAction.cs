@@ -8,9 +8,7 @@ namespace DigThemGraves
 
         public abstract Sprite Sprite { get; set; }
 
-        public void Cancel()
-        {
-        }
+        public abstract void Cancel();
 
         public abstract void Execute();
 	}

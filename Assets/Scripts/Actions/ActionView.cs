@@ -12,6 +12,13 @@ namespace DigThemGraves
     {
         public IAction action;
 
+        private ActionQueue actionQueue;
+
+        void Start()
+        {
+            actionQueue = GameObject.FindGameObjectWithTag("GameManager").GetComponent<ActionQueue>();
+        }
+
         public void Load(IAction action)
         {
             this.action = action;
@@ -20,7 +27,6 @@ namespace DigThemGraves
 
         public void OnClicked()
         {
-            ActionQueue actionQueue = GameObject.FindGameObjectWithTag("GameManager").GetComponent<ActionQueue>();
             actionQueue.RemoveAction(action);
         }
     }

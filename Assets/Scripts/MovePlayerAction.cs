@@ -44,5 +44,10 @@ namespace DigThemGraves
 				var worldClickPosition = playerCamera.ScreenToWorldPoint(clickData.OnScreenClickPoint);
 			}
 		}
-	}
+
+        public override void Cancel()
+        {
+
+        }
+    }
 }

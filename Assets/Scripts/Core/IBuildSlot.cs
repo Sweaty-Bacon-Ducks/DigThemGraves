@@ -7,7 +7,5 @@ namespace DigThemGraves
 		IBuildable Occupant { get; }
 
         List<Buildable> PossibleBuildables { get; }
-
-        void OnMouseUp();
 	}
 }
