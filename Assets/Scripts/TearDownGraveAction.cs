@@ -9,6 +9,8 @@ namespace DigThemGraves
 
         private GameObject target;
 
+        private Sprite sprite;
+
         private bool isFinished;
         public bool IsFinished
         {
@@ -22,6 +24,18 @@ namespace DigThemGraves
             }
         }
 
+        public Sprite Sprite
+        {
+            get
+            {
+                return sprite;
+            }
+            set
+            {
+                sprite = value;
+            }
+        }
+
         public TearDownGraveAction(GameObject target)
         {
             this.target = target;
@@ -29,7 +43,12 @@ namespace DigThemGraves
 
         public void Execute()
 		{
-            Debug.Log("Tearing grave");
+            isFinished = true;
 		}
-	}
+
+        public void Cancel()
+        {
+
+        }
+    }
 }

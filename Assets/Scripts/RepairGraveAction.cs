@@ -25,6 +25,19 @@ namespace DigThemGraves
             }
         }
 
+        private Sprite sprite;
+        public Sprite Sprite
+        {
+            get
+            {
+                return sprite;
+            }
+            set
+            {
+                sprite = value;
+            }
+        }
+
         public RepairGraveAction(GameObject target)
         {
             this.target = target;
@@ -32,8 +45,13 @@ namespace DigThemGraves
 
         public void Execute()
         {
-            Debug.Log("Repairing grave");
             target.GetComponent<IGrave>().Health.Heal(repairAmmount);
+            isFinished = true;
         }
-	}
+
+        public void Cancel()
+        {
+            
+        }
+    }
 }
