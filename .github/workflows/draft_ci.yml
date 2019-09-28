@@ -8,9 +8,11 @@ jobs:
     runs-on: macOS-10.14
     
     steps:
-    - name: Downloads unity and build targets
+    - name: Download unity
       run: wget https://download.unity3d.com/download_unity/20c1667945cf/MacEditorInstaller/Unity.pkg
+    - name: Download build target
       run: wget https://download.unity3d.com/download_unity/20c1667945cf/MacEditorTargetInstaller/UnitySetup-Android-Support-for-Editor-2019.2.0f1.pkg
     - name: Install unity
       run: sudo installer -pkg Unity.pkg -target /
+    - name: Install build target
       run: sudo installer -pkg UnitySetup-Android-Support-for-Editor-2019.2.0f1.pkg -target /
