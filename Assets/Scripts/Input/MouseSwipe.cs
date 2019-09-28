@@ -12,25 +12,40 @@ namespace DigThemGraves
         {
             get
             {
-                if (Input.GetMouseButtonDown(LEFT_MOUSE_BUTTON))
-                {
+                if (UserPressedLeftMouseButton)
                     lastClick = Input.mousePosition;
-                }
 
-                var currentMousePosition = Input.mousePosition;
+                return UserHoldsLeftMouseButton ? 
+                    new SwipeData(SwipeDirection,
+                                  HasMousePositionChanged) : SwipeData.NullSwipe();
+            }
+        }
+
+        private bool UserPressedLeftMouseButton
+        {
+            get => Input.GetMouseButtonDown(LEFT_MOUSE_BUTTON);
+        }
+
+        private bool UserHoldsLeftMouseButton
+        {
+            get => Input.GetMouseButton(LEFT_MOUSE_BUTTON);
+        }
+
+        private Vector3 SwipeDirection
+        {
+            get => (Input.mousePosition - lastClick).normalized;
+        }
+
+        private bool HasMousePositionChanged
+        {
+            get
+            {
+                Vector3 currentMousePosition = Input.mousePosition;
                 if ((lastClick - currentMousePosition).magnitude < DEADZONE)
                 {
-                    mousePositionChanged = false;
+                    return false;
                 }
-                mousePositionChanged = true;
-
-                if (Input.GetMouseButton(LEFT_MOUSE_BUTTON))
-                {
-                    var direction = (currentMousePosition - lastClick).normalized;
-                    var result = new SwipeData(direction, mousePositionChanged);
-                    return result;
-                }
-                return SwipeData.NullSwipe();
+                return true;
             }
         }
     }

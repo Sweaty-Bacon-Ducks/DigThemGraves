@@ -4,23 +4,38 @@ namespace DigThemGraves
 {
     class FingerSwipe : UserSwipe
     {
+        private Vector2 touchPositionChange;
         public override SwipeData Swipe
         {
             get
             {
-                if (Input.touchCount == 1)
+                if (UserHasTappedTheScreenOnce)
                 {
-                    var currentTouch = Input.GetTouch(0);
-                    var positionChange = currentTouch.deltaPosition;
-                    var swiped = false;
-                    if (positionChange.magnitude >= 0)
-                    {
-                        swiped = true;
-                    }
-                    return new SwipeData(positionChange.normalized, swiped);
+                    touchPositionChange = LastTouchPositionDifference;
+                    return new SwipeData(SwipeDirection, HasUserSwiped);
                 }
                 return SwipeData.NullSwipe();
             }
+        }
+
+        private bool UserHasTappedTheScreenOnce
+        {
+            get => Input.touches.Length == 1;
+        }
+
+        private Vector2 LastTouchPositionDifference
+        {
+            get => Input.GetTouch(0).deltaPosition;
+        }
+
+        private Vector2 SwipeDirection
+        {
+            get => Input.GetTouch(0).deltaPosition.normalized;
+        }
+
+        private bool HasUserSwiped
+        {
+            get => touchPositionChange.magnitude >= 0;
         }
     }
 }
