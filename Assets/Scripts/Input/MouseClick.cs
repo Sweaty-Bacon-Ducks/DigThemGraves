@@ -2,7 +2,7 @@
 
 namespace DigThemGraves
 {
-	public class MouseClick : InputClick
+	public class LeftMouseButtonClick : InputClick
 	{
 		private const short LEFT_MOUSE_BUTTON = 0;
 		public override ClickData ClickPoint
