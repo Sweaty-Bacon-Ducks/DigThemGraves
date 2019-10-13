@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 namespace DigThemGraves
 {
-	public class MovePlayerAction : MonoBehaviour, IAction
+	public class MovePlayerAction : PlayerAction
 	{
 		[SerializeField]
 		private Transform target;
@@ -13,7 +13,7 @@ namespace DigThemGraves
 		private LayerMask invalidWalkingLayers;
 		private InputClick clickGateway;
 
-		public bool IsFinished { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        public override bool IsFinished { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
         private Sprite sprite;
         public override Sprite Sprite
@@ -35,11 +35,10 @@ namespace DigThemGraves
 
 		private void Update()
 		{
-
 			Execute();
 		}
 
-		public void Execute()
+		public override void Execute()
 		{
 			var clickData = clickGateway.ClickPoint;
 			if (clickData.Clicked)

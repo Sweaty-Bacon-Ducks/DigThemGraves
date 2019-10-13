@@ -9,7 +9,7 @@ namespace DigThemGraves
     public class PlayerActions : IPlayerActions
     {
         [SerializeField]
-        private List<ScriptablePlayerAction> actions;
+        private List<PlayerAction> actions;
 
         public ICollection<IPlayerAction> Actions => (ICollection<IPlayerAction>)actions;
 
