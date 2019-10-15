@@ -2,7 +2,7 @@
 
 namespace DigThemGraves
 {
-    public abstract class ScriptablePlayerAction : ScriptableObject, IPlayerAction
+    public abstract class PlayerAction : MonoBehaviour, IPlayerAction
     {
 		public abstract bool IsFinished { get; set; }
 

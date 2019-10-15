@@ -1,18 +1,19 @@
 ﻿using UnityEngine;
 namespace DigThemGraves
 {
-	[CreateAssetMenu(menuName = "PlayerActions/Move", fileName = "MovePlayerAction")]
-	public class MovePlayerAction : ScriptablePlayerAction
+	public class MovePlayerAction : PlayerAction
 	{
 		[SerializeField]
-		private Vector3 target;
+		private Transform target;
 		[SerializeField]
 		private Camera playerCamera;
 		[SerializeField]
 		private float zOffset;
+		[SerializeField]
+		private LayerMask invalidWalkingLayers;
 		private InputClick clickGateway;
 
-		public override bool IsFinished { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
+        public override bool IsFinished { get => throw new System.NotImplementedException(); set => throw new System.NotImplementedException(); }
 
         private Sprite sprite;
         public override Sprite Sprite
@@ -32,17 +33,30 @@ namespace DigThemGraves
 			clickGateway = InputClick.Create();
 		}
 
-		public MovePlayerAction(GameObject target2)
+		private void Update()
 		{
-            target = target2.transform.position;
+			Execute();
 		}
+
 		public override void Execute()
 		{
 			var clickData = clickGateway.ClickPoint;
 			if (clickData.Clicked)
 			{
 				var worldClickPosition = playerCamera.ScreenToWorldPoint(clickData.OnScreenClickPoint);
+				if (ValidWalkingTerrain(worldClickPosition))
+				{
+					worldClickPosition.z = zOffset;
+					target.position = worldClickPosition;
+				}
 			}
+		}
+
+		private bool ValidWalkingTerrain(Vector2 point)
+		{
+			var foundCollider = Physics2D.OverlapPoint(point,
+													   invalidWalkingLayers);
+			return foundCollider == null;
 		}
 
         public override void Cancel()

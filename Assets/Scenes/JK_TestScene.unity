@@ -120,6 +120,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!20 &172804245 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 5131438646583401178, guid: d4fbb31416728ce4aba1f500c4a83ee8,
+    type: 3}
+  m_PrefabInstance: {fileID: 5131438646704106996}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &667048323
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +208,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &849778917
 Transform:
@@ -1138,7 +1144,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIezyYT/rewIAACMFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoWRHRxwby0hJId8TGgnF1+EtMYabMkjyQGS4b93JRvsUC7I+3bfvn1a+4tIZWvgTpuVkeJJCyA/R+TR6gqckdwHyY9Rn/UAB7bVai0/4Zz8LoUrfBILOW/MSY3xyJedeX6pbemTb+mE+t/NHNFGyVybaim2sNDWWcRzVlpAyGjnaRSGvkbkgH/jaYLxI57iGcXTJ55SOjrhkYNyYAap0SRJaZrSadyVjOlklibTNImSuKudTaYJvZ0txzQNJI3iJatqEH60niu66SgiJA2JCsfucujEa+K6LKXtxBJ3rIMrb+zoPRGSoQNBnTekALktnB9iWPiS5xZ81A9m2PFOGjSyZSS/detuxeyu1fXBysb3SKI4KGpJn/7Dx1GAc6Orh3PfiPoerpB8hwo5s27g+jB89114o/as3LFNCe8FqGe9MrpRAkFnGl/aWIjv+sfLaIsC+K6Pt1Kvgk3d+007u89X7Gc4hekPi1JWm+D6tA2sSx28Tn0yGLyXRxQc9sZ2FBj1Kv5a+MO2wwXrgHtprEOom1J5eRvdGJ9KlsEzP03jFtooCOFOdA2Kle74ijTu+gqvsEHbK+Se+Xeqa95h51flqiSE+3xKr6BXvb9cli30/gls8dK4UiroRXvgGX1aaKXaDRt6ci5bNyZnfFC2baT4vlqEJhBv5vNoPpvO0uiGjymP57EQgiZ0zvjthoTdkwrnZOVrK7SzB29N9eQK98wz+k/NaGVYHbZdGLZfyc9KDyyXKtdrbgDUS8twEQ4Gm+A7KZZCokFrcE6qcN/kKyOl5jsQ2YUoC5MuD86wrGfJSC0/tPORjCzCJyUjJ3L6B1BLAwQUAAAICAAACCHsxda9DWwAAAB3AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9Kz0FFQSi9KLMgoBgoYgjilmSkgdrSSgWmqUZKFhaGFuYm5paFxsq5BspGFUUpKioGpgUVislmSUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIezyYT/rewIAACMFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIezF1r0NbAAAAHcAAAAJACQAAAAAAAAAAAAAAMgCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAfwMAAAAA
+    dataString: UEsDBBQAAAgIAAAIIey+k8qfWgIAAAUFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z4jAM/SuMz9uOSYHSve1SSnvox5Td6SUXYyvEg2Nn/FGgHf77yk4gKTvNJY70JL0nyfkkUrsauDd2YaV4NALIzwF5cKYCbyWPRvJj0KHuYcfWRi/lBxzBb1L4MoJYwrwyLw3ahzHsmOeXXqsIntBLGp+rKXqDloWx1VysYWacd+gvmHKALmt8TKPR9DkgO3xdjMZo3+Mpu6Z4+sDTDR0c8MhBe7AdlLbAI6xBBc0Vq2oQkXsHnoxa9GSUYBpVtQh6mcWa3CglXUuG+H2dVL+yfdQsJEOFqXoUXIJclz6S7Ac+F4UD3zKybH8rLTaqyUh+m6Z7FXObhtY7UyHWGA+zRKlJ+vif/2KY3IU11f2x7pDGGr6UfIMMOXO+19W++fYr8aC3TG3YSsFbCfrJLKwJWqDT2xBDg4Pstvs8SZuVwDedvaF6Zgz197OJGg5J/W6mZLVKbR81hqUyqdc3EQwWB/OAhNNeuDYFWiOLvw7+sHV/gVrHnbTOo6tVqSO9lQk2Qsk89SyqCX5mrAbbz1CDZsrvXzCPP5/hme/7qDsWL01bvfUd78JZSDJ3eErPXC9me5qWK832EVz5HLySup8sep6wUzOjdbNjrhvEMWwZbMF4P2wdpPi6XISOIVtNp8Pp9ej6ZnjFLyjPppkQgo7plPHJiqTtkxqFMvXSMG37g3PTXVmNmxYzxp/JYGFZnfZdWLZdyI/K9AhKXZgltwD6uclwkgUWi+C1FHMhsUNL8F7qNHHymRNl+AZEfkqUJ6nznbcs77LkpJbvxkdLTmbpp5GTAzn8A1BLAwQUAAAICAAACCHsxda9DWwAAAB3AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9Kz0FFQSi9KLMgoBgoYgjilmSkgdrSSgWmqUZKFhaGFuYm5paFxsq5BspGFUUpKioGpgUVislmSUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAAAIIey+k8qfWgIAAAUFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIezF1r0NbAAAAHcAAAAJACQAAAAAAAAAAAAAAKcCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAXgMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -1294,7 +1300,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: d6159a1dcc0db8646be49425e75c769b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a68c1cf7f2f909942b7af058faec72f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1324,7 +1330,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1313660383
 Transform:
@@ -1701,7 +1707,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!156049354 &1893459317
 Grid:
@@ -1778,6 +1784,9 @@ GameObject:
   - component: {fileID: 2046239483}
   - component: {fileID: 2046239482}
   - component: {fileID: 2046239484}
+  - component: {fileID: 2046239487}
+  - component: {fileID: 2046239488}
+  - component: {fileID: 2046239489}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1873,12 +1882,12 @@ MonoBehaviour:
   targetCompatibility: {fileID: 0}
   maxAcceleration: -2.5
   rotationSpeed: 32400
-  slowdownDistance: 0.6
-  pickNextWaypointDist: 2
-  endReachedDistance: 0.2
+  slowdownDistance: 0.3
+  pickNextWaypointDist: 0.3
+  endReachedDistance: 0.05
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
-  whenCloseToDestination: 0
+  whenCloseToDestination: 1
   constrainInsideGraph: 0
 --- !u!114 &2046239483
 MonoBehaviour:
@@ -1897,8 +1906,8 @@ MonoBehaviour:
   detailedGizmos: 0
   startEndModifier:
     addPoints: 0
-    exactStartPoint: 3
-    exactEndPoint: 3
+    exactStartPoint: 0
+    exactEndPoint: 0
     useRaycasting: 0
     mask:
       serializedVersion: 2
@@ -1922,8 +1931,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 2041536020}
---- !u!70 &2046239485
-CapsuleCollider2D:
+--- !u!58 &2046239485
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1931,13 +1940,13 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 2046239477}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: ec0748564add34833a7f467f6394958f, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.1459533, y: 0.29768765}
-  m_Direction: 0
+  serializedVersion: 2
+  m_Radius: 0.03
 --- !u!114 &2046239486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1953,6 +1962,55 @@ MonoBehaviour:
   availableActions:
     actions:
     - {fileID: 0}
+--- !u!114 &2046239487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046239477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc9c513551b6d3546a13e8f4e60cc061, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 2041536020}
+  playerCamera: {fileID: 172804245}
+  zOffset: 0
+  invalidWalkingLayers:
+    serializedVersion: 2
+    m_Bits: 512
+--- !u!114 &2046239488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046239477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050457294c334654fb8ba3d45d588839, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!95 &2046239489
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046239477}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 86cbae2919ffdeb4c88f48bf2169b1be, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &5131438646704106996
 PrefabInstance:
   m_ObjectHideFlags: 0
