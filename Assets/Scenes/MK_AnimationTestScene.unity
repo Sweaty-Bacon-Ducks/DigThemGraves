@@ -1339,8 +1339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aiPath: {fileID: 2046239482}
-  animator: {fileID: 1268403889}
-  speed: 3
+  speedMultiplier: 3
 --- !u!1 &1313660382
 GameObject:
   m_ObjectHideFlags: 0

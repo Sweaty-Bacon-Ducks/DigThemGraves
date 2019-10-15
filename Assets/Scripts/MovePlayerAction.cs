@@ -58,7 +58,7 @@ namespace DigThemGraves
 													   invalidWalkingLayers);
 			return foundCollider == null;
 		}
-	}
+
         public override void Cancel()
         {
 
