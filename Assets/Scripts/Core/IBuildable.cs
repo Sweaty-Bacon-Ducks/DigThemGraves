@@ -3,8 +3,7 @@
     public interface IBuildable
 	{
         IActions AvailableActions { get; }
-        IBuildSlot OccupiedSlot { get; set; }
-        BuildSlot TargetedBuildSlot { get; set; }
+        BuildSlot OccupiedSlot { get; set; }
         void Build();
     }
 }

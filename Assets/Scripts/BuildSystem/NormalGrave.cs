@@ -10,30 +10,21 @@ namespace DigThemGraves
         public override IActions AvailableActions { get { return AvailableActions; } }
         public override IHealth Health { get { return Health; } }
 
-        private IBuildSlot occupiedSlot;
-        public override IBuildSlot OccupiedSlot
+        private BuildSlot occupiedSlot;
+        public override BuildSlot OccupiedSlot
         {
             get { return occupiedSlot; }
             set { occupiedSlot = value; }
-        }
-
-        private BuildSlot targetedBuildSlot;
-        public override BuildSlot TargetedBuildSlot
-        {
-            get { return targetedBuildSlot; }
-            set { targetedBuildSlot = value; }
         }
 
         public override void Build()
         {
             ActionQueue actionQueue = GameObject.FindGameObjectWithTag("GameManager").GetComponent<ActionQueue>();
 
-            TargetedBuildSlot.GetComponent<SpriteRenderer>().sprite = sprite;
+            occupiedSlot.GetComponent<SpriteRenderer>().sprite = sprite;
 
-            actionQueue.AddAction(new BuildAction(TargetedBuildSlot.gameObject, sprite));
-            actionQueue.AddAction(new BuildAction(TargetedBuildSlot.gameObject, sprite));
-
-            OccupiedSlot = TargetedBuildSlot;
+            actionQueue.AddAction(new BuildAction(occupiedSlot.gameObject, sprite));
+            actionQueue.AddAction(new BuildAction(occupiedSlot.gameObject, sprite));
         }
     }
 }

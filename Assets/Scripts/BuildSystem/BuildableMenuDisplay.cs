@@ -38,7 +38,7 @@ namespace DigThemGraves
             {
                 Buildable newBuildable = Instantiate(buildable);
                 newBuildable.transform.SetParent(buttonsParent);
-                newBuildable.TargetedBuildSlot = targetedBuildSlot;
+                newBuildable.OccupiedSlot = targetedBuildSlot;
             }
 
             // Create scrollable menu appropriate for number of buildables
