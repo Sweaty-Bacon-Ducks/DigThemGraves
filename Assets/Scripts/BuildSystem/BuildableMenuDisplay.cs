@@ -7,9 +7,13 @@ namespace DigThemGraves
     // TODO: 
     // Wyłączanie menu, jeśli gracz kliknął poza BuildSlot
     // Dokładniejsze dostosowanie wielkości menu scrollowania do ilości przycisków
+    /// <summary>
+    /// Class responsible for loading proper and showing "ListOfAvailableActions" icons
+    /// </summary>
     public class BuildableMenuDisplay : MonoBehaviour
     {
         [SerializeField]
+        [Tooltip("Parent object of ListOfAvailableActions")]
         private GameObject buildableMenu;
 
         private List<Buildable> possibleBuildables;
