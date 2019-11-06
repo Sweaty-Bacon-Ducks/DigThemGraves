@@ -1085,7 +1085,7 @@ GameObject:
   - component: {fileID: 1026647256}
   - component: {fileID: 1026647255}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: ListOfUndergoingActions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1609,7 +1609,7 @@ GameObject:
   - component: {fileID: 2012971536}
   - component: {fileID: 2012971538}
   m_Layer: 5
-  m_Name: Panel
+  m_Name: ListOfAvailableActions
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
