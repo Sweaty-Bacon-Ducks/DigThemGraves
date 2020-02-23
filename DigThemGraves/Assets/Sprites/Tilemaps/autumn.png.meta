@@ -1,0 +1,1309 @@
+fileFormatVersion: 2
+guid: 7c5f91682dc3ccc49b74dc3962f2a281
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7032198521998408370
+    second: autumn_0
+  - first:
+      213: 6048413730828854711
+    second: autumn_1
+  - first:
+      213: -4477061417427153531
+    second: autumn_2
+  - first:
+      213: -1981338584721265058
+    second: autumn_3
+  - first:
+      213: 6300229560705219267
+    second: autumn_4
+  - first:
+      213: -8383128215957909180
+    second: autumn_5
+  - first:
+      213: -1036197554590438143
+    second: autumn_6
+  - first:
+      213: 7038906533470971353
+    second: autumn_7
+  - first:
+      213: 3847344420253510361
+    second: autumn_8
+  - first:
+      213: -7047539813661059441
+    second: autumn_9
+  - first:
+      213: 7725029307776731366
+    second: autumn_10
+  - first:
+      213: -106492825490917544
+    second: autumn_11
+  - first:
+      213: -1661817170043227025
+    second: autumn_12
+  - first:
+      213: -140315479344504582
+    second: autumn_13
+  - first:
+      213: 3286140334297060311
+    second: autumn_14
+  - first:
+      213: -6069132843544012794
+    second: autumn_15
+  - first:
+      213: 3295835449848788140
+    second: autumn_16
+  - first:
+      213: -3621028622033961198
+    second: autumn_17
+  - first:
+      213: -4829115659953886681
+    second: autumn_18
+  - first:
+      213: -6087069824498760536
+    second: autumn_19
+  - first:
+      213: -4075203843636790129
+    second: autumn_20
+  - first:
+      213: -4687513896266932792
+    second: autumn_21
+  - first:
+      213: -666188291046935629
+    second: autumn_22
+  - first:
+      213: -4048120157850796665
+    second: autumn_23
+  - first:
+      213: 3370398574905915213
+    second: autumn_24
+  - first:
+      213: -1391184097055111103
+    second: autumn_25
+  - first:
+      213: 6577723762391367063
+    second: autumn_26
+  - first:
+      213: 36421568520210126
+    second: autumn_27
+  - first:
+      213: -1566822984441060146
+    second: autumn_28
+  - first:
+      213: -2465624653634500878
+    second: autumn_29
+  - first:
+      213: -2940321289131055780
+    second: autumn_30
+  - first:
+      213: 8215858787687058008
+    second: autumn_31
+  - first:
+      213: -3280136806438397978
+    second: autumn_32
+  - first:
+      213: 8629406783788849189
+    second: autumn_33
+  - first:
+      213: -7289825551054153223
+    second: autumn_34
+  - first:
+      213: 2325881785830263253
+    second: autumn_35
+  - first:
+      213: 4949483108649027591
+    second: autumn_36
+  - first:
+      213: 8728223846871998206
+    second: autumn_37
+  - first:
+      213: 365212039680345433
+    second: autumn_38
+  - first:
+      213: -745281153195873041
+    second: autumn_39
+  - first:
+      213: -545211679073370779
+    second: autumn_40
+  - first:
+      213: -4151959470940672797
+    second: autumn_41
+  - first:
+      213: 1219179146878123532
+    second: autumn_42
+  - first:
+      213: -3297977628231500234
+    second: autumn_43
+  - first:
+      213: -2939198371778407253
+    second: autumn_44
+  - first:
+      213: 3996219751045763639
+    second: autumn_45
+  - first:
+      213: 2246553231480668457
+    second: autumn_46
+  - first:
+      213: -8149780873964808658
+    second: autumn_47
+  - first:
+      213: 7575162964643995195
+    second: autumn_48
+  - first:
+      213: -2153789828959479996
+    second: autumn_49
+  - first:
+      213: -6833374626545753930
+    second: autumn_50
+  - first:
+      213: 7194127937765345140
+    second: autumn_51
+  - first:
+      213: 6269193820903916935
+    second: autumn_52
+  - first:
+      213: -5432219435450081482
+    second: autumn_53
+  - first:
+      213: -149633362888294172
+    second: autumn_54
+  - first:
+      213: 4883527783920869158
+    second: autumn_55
+  - first:
+      213: 9014347179618488022
+    second: autumn_56
+  - first:
+      213: 3108657240485214947
+    second: autumn_57
+  - first:
+      213: 218158008771985526
+    second: autumn_58
+  - first:
+      213: -3921825772319999248
+    second: autumn_59
+  - first:
+      213: -5551598432841026894
+    second: autumn_60
+  - first:
+      213: 5382690438346176919
+    second: autumn_61
+  - first:
+      213: -6069282697482192869
+    second: autumn_62
+  - first:
+      213: 7092859845548759193
+    second: autumn_63
+  - first:
+      213: 5187630820555413989
+    second: autumn_64
+  - first:
+      213: -8325443368233103058
+    second: autumn_65
+  - first:
+      213: -6200133048538776835
+    second: autumn_66
+  - first:
+      213: 8779827575447063659
+    second: autumn_67
+  - first:
+      213: -3632994145104301130
+    second: autumn_68
+  - first:
+      213: 2105471824333528390
+    second: autumn_69
+  - first:
+      213: -3370889586929168643
+    second: autumn_70
+  - first:
+      213: -8480809676871046134
+    second: autumn_71
+  - first:
+      213: -9057141846594745211
+    second: autumn_72
+  - first:
+      213: 390434746684282879
+    second: autumn_73
+  - first:
+      213: -400429465154177893
+    second: autumn_74
+  - first:
+      213: -8103513480282430683
+    second: autumn_75
+  - first:
+      213: 4991058310732270925
+    second: autumn_76
+  - first:
+      213: -8234547384457163997
+    second: autumn_77
+  - first:
+      213: -3304108191996683862
+    second: autumn_78
+  - first:
+      213: -1956073605571076119
+    second: autumn_79
+  - first:
+      213: -4087192485378948912
+    second: autumn_80
+  - first:
+      213: 3747950886833849658
+    second: autumn_81
+  - first:
+      213: 7745094906527487908
+    second: autumn_82
+  - first:
+      213: -2443903801552645611
+    second: autumn_83
+  - first:
+      213: 6313376649661537064
+    second: autumn_84
+  - first:
+      213: -4667657906877863712
+    second: autumn_85
+  - first:
+      213: 3922653159305898714
+    second: autumn_86
+  - first:
+      213: -7236388326395117683
+    second: autumn_87
+  - first:
+      213: -7004335519355647044
+    second: autumn_88
+  - first:
+      213: -5816218797605173054
+    second: autumn_89
+  - first:
+      213: 5400246226544304260
+    second: autumn_90
+  - first:
+      213: 1990012537390897016
+    second: autumn_91
+  - first:
+      213: 1676926824619574531
+    second: autumn_92
+  - first:
+      213: -2432841600994761800
+    second: autumn_93
+  - first:
+      213: 3004840053185529406
+    second: autumn_94
+  - first:
+      213: -9136187018217584957
+    second: autumn_95
+  - first:
+      213: 8368405145718573184
+    second: autumn_96
+  - first:
+      213: 5458403471956377983
+    second: autumn_97
+  - first:
+      213: -3652413976273895948
+    second: autumn_98
+  - first:
+      213: -8463975585450306562
+    second: autumn_99
+  - first:
+      213: 6912726153975221963
+    second: autumn_100
+  - first:
+      213: 7726138538325752105
+    second: autumn_101
+  - first:
+      213: -8365183422415723044
+    second: autumn_102
+  - first:
+      213: -3632939691121301842
+    second: autumn_103
+  - first:
+      213: 6417131712248816103
+    second: autumn_104
+  - first:
+      213: -7942028047465166075
+    second: autumn_105
+  - first:
+      213: -3618081010437287052
+    second: autumn_106
+  - first:
+      213: -3618895222744358723
+    second: autumn_107
+  - first:
+      213: -3092210433541900156
+    second: autumn_108
+  - first:
+      213: 6553281353391194349
+    second: autumn_109
+  - first:
+      213: -5801811877436884082
+    second: autumn_110
+  - first:
+      213: 8290480411885985763
+    second: autumn_111
+  - first:
+      213: -2935202284477688058
+    second: autumn_112
+  - first:
+      213: 7850677364234779368
+    second: autumn_113
+  - first:
+      213: 1036685566608872121
+    second: autumn_114
+  - first:
+      213: -868361937809925409
+    second: autumn_115
+  - first:
+      213: -7815918566501061224
+    second: autumn_116
+  - first:
+      213: 3368855862073295188
+    second: autumn_117
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 128
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: autumn_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 704
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70ae474e5256a547954b2214657cbc1
+      internalID: -7032198521998408370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 704
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb3cf2f8183c99c48bfd550d05b7688e
+      internalID: 6048413730828854711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_2
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 704
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e4bbc8fd2832cc4ebd75650e100a45b
+      internalID: -4477061417427153531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 704
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9a89399b8abdb246ad71a7835d244ee
+      internalID: -1981338584721265058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 704
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f90231f9617f8174b8d239fa6b7425c5
+      internalID: 6300229560705219267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_5
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 704
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df40e1c2de423c049952e9727df3f3e8
+      internalID: -8383128215957909180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 640
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e736e74d70ab6643b67db3b8342956d
+      internalID: -1036197554590438143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_7
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 640
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc98219d6bc4014eac2cba8edde340c
+      internalID: 7038906533470971353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_8
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 640
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0d6ffba066e70a4588ed57ff0941dec
+      internalID: 3847344420253510361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_9
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 640
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 628775bdca5ceec4cadf49cf0389cb58
+      internalID: -7047539813661059441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 640
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca96a051be2ea9499236ede9a108ae3
+      internalID: 7725029307776731366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_11
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 640
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 481c6ff0a5a60ac47b658a0af8028a12
+      internalID: -106492825490917544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6017ac44fd6cbe46828e9c046dcefd0
+      internalID: -1661817170043227025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_13
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 512
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429b6e871c8efb04c894650d1a5b10d7
+      internalID: -140315479344504582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_14
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 997456c93822ca94f98134775371e980
+      internalID: 3286140334297060311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_15
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 512
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0cab0a3ed5b39e43b245fff6bf401da
+      internalID: -6069132843544012794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_16
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 448
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1f4083698e0c2748a6296ecb7c86d30
+      internalID: 3295835449848788140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_17
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 448
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76ddeffe920b70a46bc6f90962eacc51
+      internalID: -3621028622033961198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_18
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 448
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d04b1f0e6dc4a3345866600f9c2f7768
+      internalID: -4829115659953886681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_19
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 448
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 596395061ec097f4abe728dfea8bed0c
+      internalID: -6087069824498760536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 384
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05df493c5aeb9364b8690b4d589b0950
+      internalID: -4075203843636790129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 384
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b108ec4470ba7cb4b96ff62f7c38e31f
+      internalID: -4687513896266932792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_22
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 384
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b0377f3d4870f49873af47449217dc
+      internalID: -666188291046935629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_23
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 384
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75a0f71e51bd024f931a77db09565b0
+      internalID: -4048120157850796665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52e314b46ea32a049840b184e0e420e0
+      internalID: 3370398574905915213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_25
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 320
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c8798540655f0540bbde79c3c95037a
+      internalID: -1391184097055111103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_26
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 320
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d3582efc6fd7734c87352fdc0aa7de7
+      internalID: 6577723762391367063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_27
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 320
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9330214fdcf955488d9863785945569
+      internalID: 36421568520210126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e3c50ef01d038445b43b1414917fb52
+      internalID: -1566822984441060146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_29
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 256
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc234f0ace88a5d419513bbe98c10e3a
+      internalID: -2465624653634500878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_30
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd65952c9cb3d2d4a9097f317d576af7
+      internalID: -2940321289131055780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_31
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 256
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e78ecb60428f8654184c058e98952aa9
+      internalID: 8215858787687058008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb5ae6b5b625c646a841e8f3460a92f
+      internalID: -3280136806438397978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_33
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 192
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea55331da499d7f40a5e5de70d029b2f
+      internalID: 8629406783788849189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_34
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 192
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b2e1ba8e935ed04da3ce5ef380dbfc6
+      internalID: -7289825551054153223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_35
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 193
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509eff5a49bb9e14caee8de415f161ae
+      internalID: 2325881785830263253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_36
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 192
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2391398a983621b4d87bed15ab2ae4e5
+      internalID: 4949483108649027591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_37
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 128
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e60877843f8879468a0f7e399cdf532
+      internalID: 8728223846871998206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_38
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 128
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 241d7c918877da64085d38f08dd66d2c
+      internalID: 365212039680345433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: autumn_39
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 128
+        width: 128
+        height: 64
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c86d78881afbe542bf264839a49a727
+      internalID: -745281153195873041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

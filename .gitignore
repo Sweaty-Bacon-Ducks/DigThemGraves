@@ -1,7 +1,8 @@
 Library/
-Build/
+Builds/
 Logs/
 Temp/
 obj/
 .vs/
 *.csproj
+NuGetPackages/
