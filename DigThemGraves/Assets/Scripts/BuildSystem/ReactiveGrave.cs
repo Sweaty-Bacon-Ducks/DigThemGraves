@@ -31,7 +31,6 @@ namespace DigThemGraves
             currentHealthReactiveProperty = new UIntReactiveProperty();
             isSelectedReactiveProperty = new BoolReactiveProperty();
             isBuiltReactiveProperty = new BoolReactiveProperty();
-            buildTimeRemainingReactiveProperty = new FloatReactiveProperty();
             maxHealthReactiveProperty = new UIntReactiveProperty();
             buildTimeReactiveProperty = new FloatReactiveProperty();
             maxHealthReactiveProperty = new UIntReactiveProperty(maxHealth);
@@ -65,7 +64,7 @@ namespace DigThemGraves
             set => buildTimeReactiveProperty.SetValueAndForceNotify(value);
         }
 
-        public bool IsBuild
+        public bool IsBuilt
         {
             get
             {
@@ -79,7 +78,7 @@ namespace DigThemGraves
 
         public void BuildGraveWithLevel(uint level)
         {
-            if (!IsBuild)
+            if (!IsBuilt)
             {
                 this.levelReactiveProperty.SetValueAndForceNotify(level);
                 this.isBuiltReactiveProperty.SetValueAndForceNotify(true);

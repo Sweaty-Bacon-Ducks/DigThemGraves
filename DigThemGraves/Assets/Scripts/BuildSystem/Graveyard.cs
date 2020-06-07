@@ -19,7 +19,7 @@ namespace DigThemGraves
         public Graveyard()
         {
             builtGraves = new ReactiveCollection<ReactiveGrave>();
-            var s = BuiltGravesAsObservable.Where(g => g.IsBuild).Subscribe(g => builtGraves.Add(g));
+            BuiltGravesAsObservable.Where(g => g.IsBuilt).Subscribe(g => builtGraves.Add(g));
         }
 
         public Graveyard(ICollection<ReactiveGrave> buildPlaces) : this()

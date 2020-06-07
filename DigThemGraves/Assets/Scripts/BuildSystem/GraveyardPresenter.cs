@@ -27,7 +27,7 @@ namespace DigThemGraves
             GraveLevelSelector.SelectedOptionAsObservable
                               .Subscribe((l =>
                               {
-                                  graveModels.Where((item => (item.Model.IsSelected == true && !item.Model.IsBuild)))
+                                  graveModels.Where((item => (item.Model.IsSelected == true && !item.Model.IsBuilt)))
                                                       .ToList()
                                                       .ForEach((g => g.Model.BuildGraveWithLevel(l)));
                               }));
