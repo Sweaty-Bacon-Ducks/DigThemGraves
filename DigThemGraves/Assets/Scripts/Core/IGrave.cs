@@ -2,6 +2,8 @@
 {
     public interface IGrave
     {
-        IHealth Health { get; }
+        uint Level { get; }
+        void Upgrade(); // Consider using a list of actions
+        void BuildGraveWithLevel(uint level);
     }
 }

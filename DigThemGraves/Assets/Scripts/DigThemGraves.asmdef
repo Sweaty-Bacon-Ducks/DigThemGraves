@@ -1,7 +1,8 @@
 {
     "name": "DigThemGraves",
     "references": [
-        "GUID:efa45043feb7e4147a305b73b5cea642"
+        "GUID:efa45043feb7e4147a305b73b5cea642",
+        "GUID:560b04d1a97f54a4e82edc0cbbb69285"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
