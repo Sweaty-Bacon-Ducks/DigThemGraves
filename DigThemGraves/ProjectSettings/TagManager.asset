@@ -16,6 +16,7 @@ TagManager:
   - 
   - Ground
   - Obstacle
+  - Graves
   - 
   - 
   - 
@@ -35,8 +36,7 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
+  - PostProcessing
   - GUIParticles
   m_SortingLayers:
   - name: Default
@@ -47,4 +47,7 @@ TagManager:
     locked: 0
   - name: Colliders
     uniqueID: 2961009491
+    locked: 0
+  - name: UI
+    uniqueID: 1942806201
     locked: 0
