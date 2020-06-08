@@ -1,5 +1,6 @@
 ﻿using System;
 using UniRx;
+using UniRx.Operators;
 using UnityEngine;
 
 namespace DigThemGraves
@@ -32,9 +33,9 @@ namespace DigThemGraves
             isSelectedReactiveProperty = new BoolReactiveProperty();
             isBuiltReactiveProperty = new BoolReactiveProperty();
             maxHealthReactiveProperty = new UIntReactiveProperty();
-            buildTimeReactiveProperty = new FloatReactiveProperty();
             maxHealthReactiveProperty = new UIntReactiveProperty(maxHealth);
             buildTimeReactiveProperty = new FloatReactiveProperty(buildTime);
+            buildTimeRemainingReactiveProperty = new FloatReactiveProperty(buildTime);
         }
 
         public IObservable<uint> LevelAsObservable => levelReactiveProperty.AsObservable();
@@ -80,8 +81,18 @@ namespace DigThemGraves
         {
             if (!IsBuilt)
             {
-                this.levelReactiveProperty.SetValueAndForceNotify(level);
-                this.isBuiltReactiveProperty.SetValueAndForceNotify(true);
+                Observable.Interval(TimeSpan.FromMilliseconds(100))
+                    .Take(Mathf.CeilToInt(10 * BuildTime))
+                    .Subscribe(
+                        onNext: sec =>
+                        {
+                            buildTimeRemainingReactiveProperty.Value -= sec;
+                        },
+                        onCompleted: () =>
+                        {
+                            levelReactiveProperty.SetValueAndForceNotify(level);
+                            isBuiltReactiveProperty.SetValueAndForceNotify(true);
+                        });
             }
         }
 
