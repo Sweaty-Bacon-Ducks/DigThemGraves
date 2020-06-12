@@ -3,20 +3,19 @@ using UnityEngine;
 
 namespace DigThemGraves
 {
-    [RequireComponent(typeof(Camera))]
     public class MovableCamera : MonoBehaviour
     {
         [SerializeField]
         private float acceleration;
         [SerializeField]
         private bool inverseSteering;
+        [SerializeField]
+        private Camera targetCamera;
 
         private UserSwipe swipeGateway;
-        private Camera targetCamera;
         private void Awake()
         {
             swipeGateway = UserSwipe.Create();
-            targetCamera = GetComponent<Camera>();
         }
 
         private void LateUpdate()
