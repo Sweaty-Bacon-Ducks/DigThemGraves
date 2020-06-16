@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: DefaultGrave
   m_EditorClassIdentifier: 
   MaxHealth: 100
-  BuildTime: 5
+  BuildTime: 1

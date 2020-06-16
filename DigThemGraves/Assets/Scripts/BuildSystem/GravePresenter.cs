@@ -10,10 +10,13 @@ namespace DigThemGraves
     {
         [SerializeField]
         private GraveLevelViewTemplate graveLevelViewTemplate;
+        [SerializeField]
+        private Animator buildAnimator;
+        [SerializeField]
+        private Animator selectionAnimator;
 
         private SpriteRenderer spriteRenderer;
         private IController<ReactiveGrave> graveController;
-        private Animator selectionAnimator;
 
         private GraveLevelView GraveLevelViewGateway
         {
@@ -29,7 +32,6 @@ namespace DigThemGraves
         {
             spriteRenderer = GetComponent<SpriteRenderer>();
             graveController = GetComponent<IController<ReactiveGrave>>();
-            selectionAnimator = GetComponentInChildren<Animator>();
         }
 
         private void Start()
@@ -38,6 +40,16 @@ namespace DigThemGraves
                  .Where(l => l > 0)
                  .Subscribe(l => spriteRenderer.sprite = GraveLevelViewGateway.SpriteFromLevel(l));
             Model.IsSelectedAsObservable.Subscribe(s => selectionAnimator.SetBool("IsSelected", s));
+            Model.BuildTimeRemainingAsObservable
+                .Where(remainingBuildTime => (remainingBuildTime < Model.BuildTime) && (remainingBuildTime > 0))
+                .Take(1)
+                .Do(time => Debug.Log(time))
+                .Subscribe(_ => buildAnimator.SetBool("ConstructionStarted", true));
+            Model.BuildTimeRemainingAsObservable
+                .Where(remainingBuildTime => remainingBuildTime <= 0)
+                .Take(1)
+                .Do(time => Debug.Log(time))
+                .Subscribe(_ => buildAnimator.SetBool("ConstructionEnded", true));
         }
     }
 }

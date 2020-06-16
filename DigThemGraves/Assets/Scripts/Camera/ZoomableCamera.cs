@@ -2,10 +2,8 @@
 
 namespace DigThemGraves
 {
-    [RequireComponent(typeof(Camera))]
     public class ZoomableCamera : MonoBehaviour
     {
-        private Camera targetCamera;
         private InputZoom zoomGesture;
 
         [SerializeField]
@@ -14,6 +12,8 @@ namespace DigThemGraves
         private float maxZoom;
         [SerializeField]
         private float sensitivity;
+        [SerializeField]
+        private Camera targetCamera;
 
         public float MinZoom => minZoom;
         public float MaxZoom => maxZoom;
@@ -22,7 +22,6 @@ namespace DigThemGraves
         private void Awake()
         {
             zoomGesture = InputZoom.Create(sensitivity);
-            targetCamera = GetComponent<Camera>();
         }
 
         private void Update()
