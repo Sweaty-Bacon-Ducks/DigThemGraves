@@ -32,6 +32,16 @@ namespace DigThemGraves
                  });
         }
 
+        public void AddMoney(float amount)
+        {
+            Model.Add(amount);
+        }
+
+        public void SubtractMoney(float amount)
+        {
+            Model.Substract(amount);
+        }
+
         public void DebugAddMoney()
         {
             Model.Add(15);

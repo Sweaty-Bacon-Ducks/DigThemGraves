@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] private List<Item> _items = new List<Item>();
+    [SerializeField] private List<ItemTemplate> _items = new List<ItemTemplate>();
     [SerializeField] private Transform _itemsParent;
     [SerializeField] private ItemSlot[] _itemSlots;
 
@@ -30,7 +30,7 @@ public class Inventory : MonoBehaviour
         }
     }
 
-    public bool AddItem(Item item)
+    public bool AddItem(ItemTemplate item)
     {
         if (IsFull())
             return false;
@@ -40,7 +40,7 @@ public class Inventory : MonoBehaviour
         return true;
     }
 
-    public bool RemoveItem(Item item)
+    public bool RemoveItem(ItemTemplate item)
     {
         if (_items.Remove(item))
         {

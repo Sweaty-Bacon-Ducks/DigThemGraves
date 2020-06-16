@@ -7,8 +7,8 @@ public class ItemSlot : MonoBehaviour
 {
     [SerializeField] private Image _image;
 
-    private Item _item;
-    public Item Item
+    private ItemTemplate _item;
+    public ItemTemplate Item
     {
         get { return _item; }
         set
