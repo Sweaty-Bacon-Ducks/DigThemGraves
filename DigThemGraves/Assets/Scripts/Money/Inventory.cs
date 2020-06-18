@@ -1,57 +1,34 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
+using UniRx;
 
-public class Inventory : MonoBehaviour
+namespace DigThemGraves
 {
-    [SerializeField] private List<ItemTemplate> _items = new List<ItemTemplate>();
-    [SerializeField] private Transform _itemsParent;
-    [SerializeField] private ItemSlot[] _itemSlots;
-
-    private void OnValidate()
+    public class Inventory : MonoBehaviour
     {
-        if (_itemsParent != null)
-            _itemSlots = _itemsParent.GetComponentsInChildren<ItemSlot>();
+        public ReactiveCollection<ItemInstance> Items = new ReactiveCollection<ItemInstance>();
 
-        RefreshUI();
-    }
+        public MoneyPresenter Money;
 
-    private void RefreshUI()
-    {
-        int i = 0;
-        for (; i < _items.Count && i < _itemSlots.Length; i++)
+        private readonly int itemSlots = 16;
+
+        public bool IsFull { get => Items.Count >= itemSlots; }
+
+        public bool AddItem(ItemTemplate item)
         {
-            _itemSlots[i].Item = _items[i];
-        }
+            if (IsFull)
+                return false;
 
-        for (; i < _itemSlots.Length; i++)
-        {
-            _itemSlots[i].Item = null;
-        }
-    }
-
-    public bool AddItem(ItemTemplate item)
-    {
-        if (IsFull())
-            return false;
-
-        _items.Add(item);
-        RefreshUI();
-        return true;
-    }
-
-    public bool RemoveItem(ItemTemplate item)
-    {
-        if (_items.Remove(item))
-        {
-            RefreshUI();
+            Items.Add(new ItemInstance(item));
             return true;
         }
-        return false;
-    }
 
-    public bool IsFull()
-    {
-        return _items.Count >= _itemSlots.Length;
+        public bool RemoveItem(ItemInstance item)
+        {
+            if (Items.Remove(item))
+            {
+                return true;
+            }
+            return false;
+        }
     }
 }

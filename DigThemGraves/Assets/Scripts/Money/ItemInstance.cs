@@ -1,26 +1,31 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
-public class ItemInstance
+namespace DigThemGraves
 {
-	public string Name;
-	public Sprite Sprite;
-	public float Cost;
-
-	public ItemTemplate template;
-
-	public ItemInstance(ItemTemplate itemTemplate)
+	[Serializable]
+	public class ItemInstance
 	{
-		this.template = itemTemplate;
+		public string Name;
+		public Sprite Sprite;
+		public float Cost;
 
-		this.Name = itemTemplate.Name;
-		this.Sprite = itemTemplate.Sprite;
-		this.Cost = itemTemplate.Cost;
-	}
+		public ItemTemplate template;
 
-	public void ReturnToDefaults()
-	{
-		this.Name = template.Name;
-		this.Sprite = template.Sprite;
-		this.Cost = template.Cost;
+		public ItemInstance(ItemTemplate itemTemplate)
+		{
+			template = itemTemplate;
+
+			Name = itemTemplate.Name;
+			Sprite = itemTemplate.Sprite;
+			Cost = itemTemplate.Cost;
+		}
+
+		public void ReturnToDefaults()
+		{
+			Name = template.Name;
+			Sprite = template.Sprite;
+			Cost = template.Cost;
+		}
 	}
 }

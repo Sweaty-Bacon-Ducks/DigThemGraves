@@ -20,19 +20,23 @@ namespace DigThemGraves
             this.Sprite = sprite;
         }
 
+        public bool CanAfford(float amount)
+        {
+            return (_moneyReactiveProperty.Value - amount) >= 0;
+        }
+
         public void Add(float amount)
         {
             _moneyReactiveProperty.Value += amount;
         }
 
-        public bool Substract(float amount)
+        public void Substract(float amount)
         {
             if (_moneyReactiveProperty.Value < amount)
             {
-                return false;
+                Debug.LogWarning("The money is negative! Did you wanted to use SubstractWithNegatives?");
             }
             _moneyReactiveProperty.Value -= amount;
-            return true;
         }
 
         // Nie blokuję wartości < 0 żeby można było mieć długi

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wood Shovel
   m_EditorClassIdentifier: 
   Name: Wood Shovel
-  Sprite: {fileID: 21300000, guid: b8764861cbac3b5448589b2c6eea8993, type: 3}
+  Sprite: {fileID: 21300000, guid: 01fe28862003716438e164fb3f978a60, type: 3}
   Cost: 10

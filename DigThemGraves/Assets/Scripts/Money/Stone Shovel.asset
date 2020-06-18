@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Stone Shovel
   m_EditorClassIdentifier: 
   Name: Stone Shovel
-  Sprite: {fileID: 21300000, guid: b8764861cbac3b5448589b2c6eea8993, type: 3}
+  Sprite: {fileID: 21300000, guid: 2015c6147d6b31b43a0a3aa3b3ff1d69, type: 3}
   Cost: 15

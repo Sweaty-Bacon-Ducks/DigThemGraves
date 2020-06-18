@@ -1,11 +1,4 @@
-﻿using DigThemGraves;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UniRx;
-using UnityEngine;
-using UnityScript.Steps;
+﻿using UnityEngine;
 
 namespace DigThemGraves
 {
@@ -14,22 +7,16 @@ namespace DigThemGraves
         private MoneyModel _model;
         public MoneyModel Model => _model;
 
-#pragma warning disable CS0649
-        [SerializeField]
-        private TextMeshProUGUI _text;
-#pragma warning restore CS0649
-
-        [SerializeField] private Sprite _moneySprite;
+        [SerializeField] private Sprite moneySprite;
 
         private void Awake()
         {
-            _model = new MoneyModel(_moneySprite);
+            _model = new MoneyModel(moneySprite);
+        }
 
-            Model.MoneyAsObservable
-                 .Subscribe(m =>
-                 {
-                     _text.text = string.Format("{0}", m);
-                 });
+        public bool CanAfford(float amount)
+        {
+            return Model.CanAfford(amount);
         }
 
         public void AddMoney(float amount)
@@ -40,16 +27,6 @@ namespace DigThemGraves
         public void SubtractMoney(float amount)
         {
             Model.Substract(amount);
-        }
-
-        public void DebugAddMoney()
-        {
-            Model.Add(15);
-        }
-
-        public void DebugSubtractMoney()
-        {
-            Model.Substract(10);
         }
     }
 }

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Iron Shovel
   m_EditorClassIdentifier: 
   Name: Iron Shovel
-  Sprite: {fileID: 21300000, guid: b8764861cbac3b5448589b2c6eea8993, type: 3}
+  Sprite: {fileID: 21300000, guid: 38d2655a554ea7f4e83a3adfdd3d73f4, type: 3}
   Cost: 20

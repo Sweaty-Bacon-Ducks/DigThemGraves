@@ -1,52 +1,64 @@
-﻿using DigThemGraves;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ShopView : MonoBehaviour
+namespace DigThemGraves
 {
-    [Tooltip("Items available for sale")]
-    [SerializeField] private ItemTemplate[] _shopItems;
-
-    [SerializeField] GameObject _shopItemPrefab;
-    [SerializeField] Transform _shopContainer;
-
-    [SerializeField] MoneyPresenter _moneyPresenter;
-
-    private void Start()
+    public class ShopView : MonoBehaviour
     {
-        PopulateShop();
-    }
+        [Tooltip("Items available for sale")]
+        [SerializeField] private ItemTemplate[] shopItems;
 
-    private void PopulateShop()
-    {
-        foreach (ItemTemplate item in _shopItems)
+        [SerializeField] private GameObject shopItemPrefab;
+        [SerializeField] private Transform shopContainer;
+
+        [SerializeField] private Sprite moneySprite;
+
+        [SerializeField] private Inventory inventory;
+
+        private void Start()
         {
-            GameObject itemObject = Instantiate(_shopItemPrefab, _shopContainer);
-
-            itemObject.GetComponent<Button>().onClick.AddListener(() => OnShopItemButtonClick(item));
-
-            //ItemSprite
-            itemObject.transform.GetChild(0).GetComponent<Image>().sprite = item.Sprite;
-            //ItemName
-            itemObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = item.Name;
-            //ItemCost
-            itemObject.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = item.Cost.ToString();
-
-            //Money sprite
-            itemObject.transform.GetChild(3).GetComponent<Image>().sprite = _moneyPresenter.Model.Sprite;
+            PopulateShop();
         }
-    }
 
-    public void OnShopItemButtonClick(ItemTemplate item)
-    {
-        if (_moneyPresenter.Model.Substract(item.Cost))
+        private void PopulateShop()
         {
-            Debug.Log("Bought item " + item.Name);
+            foreach (ItemTemplate item in shopItems)
+            {
+                GameObject itemObject = Instantiate(shopItemPrefab, shopContainer);
+
+                itemObject.GetComponent<Button>().onClick.AddListener(() => OnShopItemButtonClick(item));
+
+                //ItemSprite
+                itemObject.transform.GetChild(0).GetComponent<Image>().sprite = item.Sprite;
+                //ItemName
+                itemObject.transform.GetChild(1).GetComponent<TextMeshProUGUI>().text = item.Name;
+                //ItemCost
+                itemObject.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = item.Cost.ToString();
+
+                //Money sprite
+                itemObject.transform.GetChild(3).GetComponent<Image>().sprite = moneySprite;
+            }
         }
-        else
+
+        // logika chyba do kontrolera
+        public void OnShopItemButtonClick(ItemTemplate item)
         {
-            Debug.Log("Cannot afford");
+            if (inventory.IsFull)
+            {
+                Debug.Log("No space for the item");
+                return;
+            }
+            if (inventory.Money.CanAfford(item.Cost))
+            {
+                inventory.Money.SubtractMoney(item.Cost);
+                inventory.AddItem(item);
+                Debug.Log("Bought item " + item.Name);
+            }
+            else
+            {
+                Debug.Log("Cannot afford");
+            }
         }
     }
 }

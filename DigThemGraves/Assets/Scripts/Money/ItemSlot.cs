@@ -1,35 +1,36 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemSlot : MonoBehaviour
+namespace DigThemGraves
 {
-    [SerializeField] private Image _image;
-
-    private ItemTemplate _item;
-    public ItemTemplate Item
+    public class ItemSlot : MonoBehaviour
     {
-        get { return _item; }
-        set
-        {
-            _item = value;
+        [SerializeField] private Image image;
 
-            if (_item == null)
-                _image.enabled = false;
-            else
+        private ItemInstance _item;
+        public ItemInstance Item
+        {
+            get { return _item; }
+            set
             {
-                _image.sprite = _item.Sprite;
-                _image.enabled = true;
+                _item = value;
+
+                if (_item == null)
+                    image.enabled = false;
+                else
+                {
+                    image.sprite = _item.Sprite;
+                    image.enabled = true;
+                }
             }
         }
-    }
 
-    private void OnValidate()
-    {
-        if (_image == null)
+        private void OnValidate()
         {
-            _image = GetComponent<Image>();
+            if (image == null)
+            {
+                image = GetComponent<Image>();
+            }
         }
     }
 }

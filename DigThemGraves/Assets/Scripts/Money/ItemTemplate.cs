@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu]
-public class ItemTemplate : ScriptableObject
+namespace DigThemGraves
 {
-	public string Name;
-	public Sprite Sprite;
-	public float Cost;
+	[CreateAssetMenu]
+	public class ItemTemplate : ScriptableObject
+	{
+		public string Name;
+		public Sprite Sprite;
+		public float Cost;
+	}
 }
