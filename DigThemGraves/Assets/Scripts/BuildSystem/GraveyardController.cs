@@ -9,12 +9,23 @@ namespace DigThemGraves
         IController<Graveyard>,
         IModelProxy<Graveyard>
     {
-        public Graveyard Model { get; private set; }
+
+        private Graveyard model;
+        public Graveyard Model
+        {
+            get
+            {
+                if (model is null)
+                {
+                    var models = GetComponentsInChildren<IModelProxy<ReactiveGrave>>();
+                    model = new Graveyard(models.Select(proxy => proxy.Model).ToList());
+                }
+                return model;
+            }
+        }
 
         private void Awake()
         {
-            var models = GetComponentsInChildren<IModelProxy<ReactiveGrave>>();
-            Model = new Graveyard(models.Select(proxy => proxy.Model).ToList());
             Model.BuildPlaces.Do((grave) =>
             {
                 grave.IsSelectedAsObservable.Where(b => b)

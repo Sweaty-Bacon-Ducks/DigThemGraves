@@ -43,12 +43,10 @@ namespace DigThemGraves
             Model.BuildTimeRemainingAsObservable
                 .Where(remainingBuildTime => (remainingBuildTime < Model.BuildTime) && (remainingBuildTime > 0))
                 .Take(1)
-                .Do(time => Debug.Log(time))
                 .Subscribe(_ => buildAnimator.SetBool("ConstructionStarted", true));
             Model.BuildTimeRemainingAsObservable
                 .Where(remainingBuildTime => remainingBuildTime <= 0)
                 .Take(1)
-                .Do(time => Debug.Log(time))
                 .Subscribe(_ => buildAnimator.SetBool("ConstructionEnded", true));
         }
     }
