@@ -1,16 +1,15 @@
-﻿using NUnit.Framework.Constraints;
-using System;
+﻿using System;
 using UnityEngine;
 
 public class ConnectionPoint
 {
     public Rect rect;
     public ConnectionPointType type;
-    public Node node;
+    public GraphEditorNode node;
     public GUIStyle style;
     public Action<ConnectionPoint> OnClickConnectionPoint;
 
-    public ConnectionPoint(Node node, ConnectionPointType type, GUIStyle style, Action<ConnectionPoint> OnClickConnectionPoint)
+    public ConnectionPoint(GraphEditorNode node, ConnectionPointType type, GUIStyle style, Action<ConnectionPoint> OnClickConnectionPoint)
     {
         this.node = node;
         this.type = type;

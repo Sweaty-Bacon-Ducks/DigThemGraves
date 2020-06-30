@@ -1,11 +1,11 @@
-﻿using System.CodeDom;
+﻿using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
 public class GraphEditor : EditorWindow
 {
-    private List<Node> nodes;
+    private List<IGraphEditorNode> nodes;
     private List<Connection> connections;
 
     private GUIStyle nodeStyle;
@@ -28,7 +28,7 @@ public class GraphEditor : EditorWindow
 
     public GraphEditor()
     {
-        nodes = new List<Node>();
+        nodes = new List<IGraphEditorNode>();
         connections = new List<Connection>();
     }
 
@@ -60,12 +60,16 @@ public class GraphEditor : EditorWindow
         DrawGrid(100, 0.4f, Color.gray);
 
         DrawNodes();
-        DrawConnections();
+        //DrawConnections();
 
-        DrawConnectionLine(Event.current);
+        //if (selectedInPoint != null)
+        //    DrawConnectionLine(Event.current.mousePosition,
+        //        selectedInPoint.rect.center);
+
         ProcessNodeEvents(Event.current);
         ProcessEvents(Event.current);
 
+        GUI.changed = true;
         if (GUI.changed) Repaint();
     }
 
@@ -106,37 +110,17 @@ public class GraphEditor : EditorWindow
             c.Draw();
     }
 
-    private void DrawConnectionLine(Event e)
+    private void DrawConnectionLine(Vector2 startPosition, Vector2 endPosition)
     {
-        if (selectedInPoint != null && selectedOutPoint == null)
-        {
-            Handles.DrawBezier(
-                selectedInPoint.rect.center,
-                e.mousePosition,
-                selectedInPoint.rect.center + Vector2.left * 50f,
-                e.mousePosition - Vector2.left * 50f,
-                Color.white,
-                null,
-                2f
-            );
-
-            GUI.changed = true;
-        }
-
-        if (selectedOutPoint != null && selectedInPoint == null)
-        {
-            Handles.DrawBezier(
-                selectedOutPoint.rect.center,
-                e.mousePosition,
-                selectedOutPoint.rect.center - Vector2.left * 50f,
-                e.mousePosition + Vector2.left * 50f,
-                Color.white,
-                null,
-                2f
-            );
-
-            GUI.changed = true;
-        }
+        Handles.DrawBezier(
+            startPosition,
+            endPosition,
+            startPosition + Vector2.left * 50f,
+            endPosition - Vector2.left * 50f,
+            Color.white,
+            null,
+            2f);
+        GUI.changed = true;
     }
 
     private void ProcessEvents(Event e)
@@ -161,7 +145,16 @@ public class GraphEditor : EditorWindow
     private void ProcessContextMenu(Vector2 mousePosition)
     {
         GenericMenu genericMenu = new GenericMenu();
-        genericMenu.AddItem(new GUIContent("Add node"), false, () => OnClickAddNode(mousePosition));
+        var options = Enum.GetNames(typeof(NodeType));
+        foreach (var op in options)
+        {
+            genericMenu.AddItem(new GUIContent($"Nodes/{op}"), false, () =>
+            {
+                var nodeType = (NodeType)Enum.Parse(typeof(NodeType), op);
+                OnClickAddNode(nodeType, mousePosition);
+            });
+        }
+        //genericMenu.AddItem(new GUIContent("Add node"), false, () => OnClickAddNode(mousePosition));
         genericMenu.ShowAsContext();
     }
     private void OnDrag(Vector2 delta)
@@ -182,37 +175,32 @@ public class GraphEditor : EditorWindow
     private void ProcessNodeEvents(Event e)
     {
         foreach (var n in nodes)
-            n.ProcessEvents(e);
+            n.OnEventRaised(e);
     }
 
-    private void OnClickAddNode(Vector2 mousePosition)
+    private void OnClickAddNode(NodeType nodeType, Vector2 mousePosition)
     {
-        nodes.Add(new Node(mousePosition, 200, 50, nodeStyle, selectedNodeStyle, inPointStyle, outPointStyle, OnClickInPoint, OnClickOutPoint, OnClickRemoveNode));
+        var node = GraphEditorNodeFactory.Create(nodeType, mousePosition, resizable: true);
+        nodes.Add(node);
     }
 
-    private void OnClickRemoveNode(Node node)
+    private void OnClickRemoveNode(IGraphEditorNode node)
     {
-        if (connections != null)
-        {
-            List<Connection> connectionsToRemove = new List<Connection>();
+        //List<Connection> connectionsToRemove = new List<Connection>();
 
-            for (int i = 0; i < connections.Count; i++)
-            {
-                if (connections[i].inPoint == node.inPoint || connections[i].outPoint == node.outPoint)
-                {
-                    connectionsToRemove.Add(connections[i]);
-                }
-            }
+        //for (int i = 0; i < connections.Count; i++)
+        //{
+        //    if (connections[i].inPoint == node.inPoint || connections[i].outPoint == node.outPoint)
+        //    {
+        //        connectionsToRemove.Add(connections[i]);
+        //    }
+        //}
 
-            for (int i = 0; i < connectionsToRemove.Count; i++)
-            {
-                connections.Remove(connectionsToRemove[i]);
-            }
-
-            connectionsToRemove = null;
-        }
-
-        nodes.Remove(node);
+        //for (int i = 0; i < connectionsToRemove.Count; i++)
+        //{
+        //    connections.Remove(connectionsToRemove[i]);
+        //}
+        //nodes.Remove(node);
     }
 
     private void OnClickInPoint(ConnectionPoint inPoint)
@@ -258,11 +246,6 @@ public class GraphEditor : EditorWindow
 
     private void CreateConnection()
     {
-        if (connections == null)
-        {
-            connections = new List<Connection>();
-        }
-
         connections.Add(new Connection(selectedInPoint, selectedOutPoint, OnClickRemoveConnection));
     }
 

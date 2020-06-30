@@ -1,14 +1,13 @@
-﻿using NUnit.Framework;
-using System;
+﻿using System;
 using UnityEditor;
 using UnityEngine;
 
-public class Node
+public class GraphEditorNode : IDraggable, ISelectable, IDrawable
 {
     public Rect rect;
     public string title;
-    public bool isDragged;
-    public bool isSelected;
+    private bool isDragged;
+    private bool isSelected;
 
     public GUIStyle style;
     public GUIStyle defaultNodeStyle;
@@ -17,9 +16,20 @@ public class Node
     public ConnectionPoint inPoint;
     public ConnectionPoint outPoint;
 
-    public Action<Node> OnRemoveNode;
+    public Action<GraphEditorNode> OnRemoveNode;
 
-    public Node(Vector2 position, float width, float height, GUIStyle nodeStyle, GUIStyle selectedStyle, GUIStyle inPointStyle, GUIStyle outPointStyle, Action<ConnectionPoint> OnClickInPoint, Action<ConnectionPoint> OnClickOutPoint, Action<Node> OnClickRemoveNode)
+    public Rect DrawingSpace => throw new NotImplementedException();
+
+    public GraphEditorNode(Vector2 position,
+        float width,
+        float height,
+        GUIStyle nodeStyle,
+        GUIStyle selectedStyle,
+        GUIStyle inPointStyle,
+        GUIStyle outPointStyle,
+        Action<ConnectionPoint> OnClickInPoint,
+        Action<ConnectionPoint> OnClickOutPoint,
+        Action<GraphEditorNode> OnClickRemoveNode)
     {
         rect = new Rect(position.x, position.y, width, height);
         style = nodeStyle;
@@ -47,20 +57,20 @@ public class Node
         switch (e.type)
         {
             case EventType.MouseDown:
-                BeginDrag(e);
+                OnMouseDown(e);
                 break;
 
             case EventType.MouseUp:
-                EndDrag();
+                OnMouseUp();
                 break;
 
             case EventType.MouseDrag:
-                DragNode(e);
+                OnMouseDrag(e);
                 break;
         }
     }
 
-    private void BeginDrag(Event e)
+    private void OnMouseDown(Event e)
     {
         if (e.button == 0)
         {
@@ -69,11 +79,9 @@ public class Node
                 isDragged = true;
                 isSelected = true;
                 style = selectedNodeStyle;
-                GUI.changed = true;
             }
             else
             {
-                GUI.changed = true;
                 isSelected = false;
                 style = defaultNodeStyle;
             }
@@ -85,22 +93,25 @@ public class Node
             e.Use();
         }
     }
+
     private void ProcessContextMenu()
     {
         GenericMenu genericMenu = new GenericMenu();
         genericMenu.AddItem(new GUIContent("Remove node"), false, OnClickRemoveNode);
         genericMenu.ShowAsContext();
     }
+
     private void OnClickRemoveNode()
     {
         OnRemoveNode?.Invoke(this);
     }
-    private void EndDrag()
+
+    private void OnMouseUp()
     {
         isDragged = false;
     }
 
-    private void DragNode(Event e)
+    private void OnMouseDrag(Event e)
     {
         if (e.button == 0 && isDragged)
         {
@@ -108,5 +119,10 @@ public class Node
             e.Use();
             GUI.changed = true;
         }
+    }
+
+    public void Select()
+    {
+        throw new NotImplementedException();
     }
 }

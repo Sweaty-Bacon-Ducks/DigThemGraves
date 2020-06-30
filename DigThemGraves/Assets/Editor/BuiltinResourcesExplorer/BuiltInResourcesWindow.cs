@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Source http://wiki.unity3d.com/index.php/Show_Built_In_Resources
+// TODO: Make it less buggy, and despaggetify it 
+
+using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
