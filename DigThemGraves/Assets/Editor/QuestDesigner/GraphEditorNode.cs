@@ -18,7 +18,7 @@ public class GraphEditorNode : IDraggable, ISelectable, IDrawable
 
     public Action<GraphEditorNode> OnRemoveNode;
 
-    public Rect DrawingSpace => throw new NotImplementedException();
+    Rect IDrawable.DrawingSpace { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
     public GraphEditorNode(Vector2 position,
         float width,

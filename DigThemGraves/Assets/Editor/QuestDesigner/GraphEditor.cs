@@ -130,8 +130,11 @@ public class GraphEditor : EditorWindow
             case EventType.MouseDown:
                 if (e.button == 1)
                 {
-                    ProcessContextMenu(e.mousePosition);
+                    ShowContextMenu(e.mousePosition);
                 }
+                break;
+            case EventType.MouseUp:
+                drag = Vector2.zero;
                 break;
             case EventType.MouseDrag:
                 if (e.button == 0)
@@ -142,7 +145,7 @@ public class GraphEditor : EditorWindow
         }
     }
 
-    private void ProcessContextMenu(Vector2 mousePosition)
+    private void ShowContextMenu(Vector2 mousePosition)
     {
         GenericMenu genericMenu = new GenericMenu();
         var options = Enum.GetNames(typeof(NodeType));
@@ -154,22 +157,16 @@ public class GraphEditor : EditorWindow
                 OnClickAddNode(nodeType, mousePosition);
             });
         }
-        //genericMenu.AddItem(new GUIContent("Add node"), false, () => OnClickAddNode(mousePosition));
         genericMenu.ShowAsContext();
     }
     private void OnDrag(Vector2 delta)
     {
         drag = delta;
 
-        if (nodes != null)
+        foreach (var node in nodes)
         {
-            for (int i = 0; i < nodes.Count; i++)
-            {
-                nodes[i].Drag(delta);
-            }
+            node.Drag(delta);
         }
-
-        GUI.changed = true;
     }
 
     private void ProcessNodeEvents(Event e)

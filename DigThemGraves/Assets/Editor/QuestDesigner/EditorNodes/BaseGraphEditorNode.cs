@@ -8,7 +8,7 @@ public abstract class BaseGraphEditorNode : IGraphEditorNode
     public virtual Rect DrawingSpace
     {
         get => drawingSpace;
-        protected set => drawingSpace = value;
+        set => drawingSpace = value;
     }
 
     public void Drag(Vector2 positionChange)

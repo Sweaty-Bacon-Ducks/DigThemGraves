@@ -34,6 +34,7 @@ public class TextNode : BaseGraphEditorNode
 
     public override void Draw()
     {
+        //
         text = GUI.TextArea(DrawingSpace, text);
     }
 

@@ -2,6 +2,6 @@
 
 public interface IDrawable
 {
-    Rect DrawingSpace { get; }
+    Rect DrawingSpace { get; set; }
     void Draw();
 }
