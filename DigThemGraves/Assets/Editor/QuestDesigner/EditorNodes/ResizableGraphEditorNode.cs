@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using UnityEditor;
+﻿using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.Extensions;
 
 public class ResizableGraphEditorNode : BaseGraphEditorNode
 {
@@ -13,25 +9,12 @@ public class ResizableGraphEditorNode : BaseGraphEditorNode
     private sbyte resizeDirection;
     private const int HANDLE_SIZE = 10;
 
-    private static Rect Resize(Rect rect, float units)
-    {
-        return new Rect(rect.x - units,
-            rect.y - units,
-            rect.width + (2 * units),
-            rect.height + (2 * units));
-    }
-
-    private static Rect Resize(Rect rect, Vector2 amount)
-    {
-        return new Rect(rect.position, rect.size + amount);
-    }
-
     private static Vector2 RectPositionOffset => Vector2.one * HANDLE_SIZE;
 
     public ResizableGraphEditorNode(IGraphEditorNode node)
     {
         nodeToResize = node;
-        DrawingSpace = Resize(nodeToResize.DrawingSpace, HANDLE_SIZE);
+        DrawingSpace = nodeToResize.DrawingSpace.Scale(HANDLE_SIZE);
     }
 
     public override void Draw()
@@ -64,10 +47,10 @@ public class ResizableGraphEditorNode : BaseGraphEditorNode
         {
             if (resizing)
             {
-                nodeToResize.DrawingSpace = Resize(nodeToResize.DrawingSpace, e.delta * resizeDirection);
+                nodeToResize.DrawingSpace = nodeToResize.DrawingSpace.Scale(e.delta * resizeDirection);
 
-                DrawingSpace = Resize(nodeToResize.DrawingSpace, HANDLE_SIZE);
-                DrawingSpace = Resize(DrawingSpace, e.delta * resizeDirection);
+                DrawingSpace = nodeToResize.DrawingSpace.Scale(HANDLE_SIZE);
+                DrawingSpace = DrawingSpace.Scale(e.delta * resizeDirection);
             }
             DrawingSpace = new Rect(nodeToResize.DrawingSpace.position - RectPositionOffset, DrawingSpace.size);
         }

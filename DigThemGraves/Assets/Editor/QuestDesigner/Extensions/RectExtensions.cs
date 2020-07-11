@@ -1,18 +1,18 @@
 ﻿using UnityEngine;
 
-namespace Assets.Editor.QuestDesigner.Extensions
+namespace UnityEngine.Extensions
 {
     public static class RectExtensions
     {
         /// <summary>
-        /// 
+        /// Changes rectangles position by offset.
         /// </summary>
         /// <param name="rect"></param>
         /// <param name="offset"></param>
         /// <returns></returns>
         public static Rect Translate(this Rect rect, Vector2 offset)
         {
-
+            return new Rect(rect.position + offset, rect.size);
         }
 
         /// <summary>
