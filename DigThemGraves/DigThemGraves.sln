@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProject", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigThemGraves", "DigThemGraves.csproj", "{159FF1F9-97A1-E1B8-EAB5-994E0B964A0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{23E52E9A-441C-0BB3-A2FB-D1669464FEDD}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.2D.Tilemap.Extras", "Unity.2D.Tilemap.Extras.csproj", "{12C04E27-7E6C-1BC8-2DDA-5E15F4DB102A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AstarPathfindingProjectEditor", "AstarPathfindingProjectEditor.csproj", "{FF7AA659-8DB4-25F6-2741-878C490DCF48}"
@@ -41,10 +43,6 @@ Global
 		{159FF1F9-97A1-E1B8-EAB5-994E0B964A0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{159FF1F9-97A1-E1B8-EAB5-994E0B964A0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{159FF1F9-97A1-E1B8-EAB5-994E0B964A0E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{12C04E27-7E6C-1BC8-2DDA-5E15F4DB102A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{12C04E27-7E6C-1BC8-2DDA-5E15F4DB102A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{12C04E27-7E6C-1BC8-2DDA-5E15F4DB102A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{12C04E27-7E6C-1BC8-2DDA-5E15F4DB102A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FF7AA659-8DB4-25F6-2741-878C490DCF48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FF7AA659-8DB4-25F6-2741-878C490DCF48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF7AA659-8DB4-25F6-2741-878C490DCF48}.Release|Any CPU.ActiveCfg = Release|Any CPU

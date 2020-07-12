@@ -30,7 +30,6 @@ public class ResizableGraphEditorNode : BaseGraphEditorNode
         sbyte i = 0;
         foreach (var (rect, dir) in resizeHandleRects)
         {
-
             if (GUI.RepeatButton(rect, $"{i}"))
             {
                 Debug.Log("Resizing");

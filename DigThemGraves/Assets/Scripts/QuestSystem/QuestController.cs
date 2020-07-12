@@ -8,9 +8,6 @@ public class QuestController : MonoBehaviour, IQuestRepository
 {
     private Quests questRepository;
 
-    [SerializeField]
-    private GraveyardController graveyardController;
-
     public ReadOnlyCollection<IQuest> AvailableQuests => questRepository.AvailableQuests;
 
     public ReadOnlyCollection<IQuest> ActiveQuests => questRepository.AvailableQuests;
@@ -33,6 +30,5 @@ public class QuestController : MonoBehaviour, IQuestRepository
     public void Awake()
     {
         questRepository = new Quests();
-        questRepository.AddQuest(new BuildGraveQuest(graveyardController.Model.BuiltGravesAsObservable.Take(1)));
     }
 }

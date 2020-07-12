@@ -2,6 +2,7 @@
 
 public class TextNode : BaseGraphEditorNode
 {
+    private const string DEFAULT_TEXT = "Write your text here!";
     private string text;
     private GUIStyle textStyle;
 
@@ -23,7 +24,7 @@ public class TextNode : BaseGraphEditorNode
 
     public TextNode(Vector2 position, Vector2 size)
     {
-        text = "Write your text here!";
+        text = DEFAULT_TEXT;
         DrawingSpace = new Rect(position, size);
     }
 
@@ -34,7 +35,6 @@ public class TextNode : BaseGraphEditorNode
 
     public override void Draw()
     {
-        //
         text = GUI.TextArea(DrawingSpace, text);
     }
 

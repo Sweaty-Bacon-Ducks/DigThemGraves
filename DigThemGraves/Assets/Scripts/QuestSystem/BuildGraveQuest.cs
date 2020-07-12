@@ -7,17 +7,19 @@ namespace DigThemGraves
 {
     // TODO: Generalizacja tworzenia questów, z obecną abstrakcją wystarczy powiedzieć kiedy mają się zmieniać stany questa
     [Serializable]
-    public class BuildGraveQuest : Quest
+    public class BuildGraveQuest : ReactiveQuest
     {
-        public IObservable<ReactiveGrave> BuiltGravesAsObservable { get; private set; }
+        [SerializeField]
+        private GraveyardController graveyardController;
 
-        public BuildGraveQuest(IObservable<ReactiveGrave> builtGravesAsObservable)
+        public override IObservable<Unit> WhenFinished
         {
-            this.BuiltGravesAsObservable = builtGravesAsObservable;
+            get => graveyardController.Model.BuiltGravesAsObservable.Take(1).Do((_) => Debug.Log("good boi")).AsUnitObservable();
+        }
 
-            BuiltGravesAsObservable
-                .Do(_ => Debug.Log("Built grave for quest"))
-                .Subscribe(_ => MakeFinished());
+        public override IObservable<Unit> WhenFailed
+        {
+            get => Observable.Timer(TimeSpan.FromSeconds(10.0)).Do((_) => Debug.Log("u fucked up")).AsUnitObservable();
         }
     }
 }
