@@ -1,41 +1,44 @@
 ﻿using UnityEngine;
 using UniRx;
+using System.Collections.Generic;
 
 namespace DigThemGraves
 {
     public class InventoryView : MonoBehaviour
     {
-        [SerializeField] private Transform itemsParent;
-        [SerializeField] private ItemSlot[] itemSlots;
+        [SerializeField] private InventoryController controller;
 
-        [SerializeField] private Inventory inventory;
+        [SerializeField] private Transform itemSlotParent;
 
-        private void Awake()
+        [SerializeField] private ItemSlot itemSlotPrefab;
+
+        private List<ItemSlot> itemSlots = new List<ItemSlot>();
+
+        private void Start()
         {
             // TODO: RefreshUI won't work if an item changes but count stays the same
-            inventory.Items.ObserveCountChanged().Subscribe(_ => RefreshUI());
-        }
-
-        private void OnValidate()
-        {
-            if (itemsParent != null)
-                itemSlots = itemsParent.GetComponentsInChildren<ItemSlot>();
+            controller.GetItems.ObserveCountChanged().Subscribe(_ => RefreshUI());
         }
 
         public void RefreshUI()
         {
-            int i = 0;
+            ClearView();
 
-            for (; i < inventory.Items.Count && i < itemSlots.Length; i++)
+            for (int i = 0; i < controller.GetItems.Count; i++)
             {
-                itemSlots[i].Item = inventory.Items[i];
-            }
-
-            for (; i < itemSlots.Length; i++)
-            {
-                itemSlots[i].Item = null;
+                ItemSlot itemSlot = Instantiate(itemSlotPrefab, itemSlotParent);
+                itemSlot.Initialize(controller.GetItemAt(i));
+                itemSlots.Add(itemSlot);
             }
         }
 
+        private void ClearView()
+        {
+            foreach (ItemSlot itemSlot in itemSlots)
+            {
+                Destroy(itemSlot.gameObject);
+            }
+            itemSlots.Clear();
+        }
     }
 }

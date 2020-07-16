@@ -39,7 +39,6 @@ namespace DigThemGraves
             _moneyReactiveProperty.Value -= amount;
         }
 
-        // Nie blokuję wartości < 0 żeby można było mieć długi
         public void SubstractWithNegatives(float amount)
         {
             _moneyReactiveProperty.Value -= amount;

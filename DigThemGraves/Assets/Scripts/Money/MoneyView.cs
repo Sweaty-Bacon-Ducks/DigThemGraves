@@ -6,7 +6,8 @@ namespace DigThemGraves
 {
     public class MoneyView : MonoBehaviour
     {
-        [SerializeField] private MoneyPresenter moneyPresenter;
+        [SerializeField] 
+        private MoneyController controller;
 
 #pragma warning disable CS0649
         [SerializeField]
@@ -15,7 +16,7 @@ namespace DigThemGraves
 
         private void Awake()
         {
-            moneyPresenter.Model.MoneyAsObservable
+            controller.Model.MoneyAsObservable
                  .Subscribe(m =>
                  {
                      text.text = string.Format("{0}", m);

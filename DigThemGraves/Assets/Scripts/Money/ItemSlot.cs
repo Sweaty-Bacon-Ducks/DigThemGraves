@@ -1,11 +1,13 @@
-﻿using UnityEngine;
+﻿using UniRx;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace DigThemGraves
 {
     public class ItemSlot : MonoBehaviour
     {
-        [SerializeField] private Image image;
+        private Image image;
+        private InventoryController inventory;
 
         private ItemInstance _item;
         public ItemInstance Item
@@ -15,22 +17,19 @@ namespace DigThemGraves
             {
                 _item = value;
 
-                if (_item == null)
-                    image.enabled = false;
-                else
-                {
-                    image.sprite = _item.Sprite;
-                    image.enabled = true;
-                }
+                image.sprite = _item.Sprite;
             }
         }
 
-        private void OnValidate()
+        public void Initialize(ItemInstance item)
         {
-            if (image == null)
-            {
-                image = GetComponent<Image>();
-            }
+            inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>();
+            image = GetComponent<Image>();
+
+            GetComponent<Button>().OnClickAsObservable()
+                .Subscribe(_ => inventory.RemoveItem(Item));
+
+            Item = item;
         }
     }
 }

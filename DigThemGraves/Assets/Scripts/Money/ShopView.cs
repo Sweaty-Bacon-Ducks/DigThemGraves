@@ -10,11 +10,17 @@ namespace DigThemGraves
         [SerializeField] private ItemTemplate[] shopItems;
 
         [SerializeField] private GameObject shopItemPrefab;
-        [SerializeField] private Transform shopContainer;
 
-        [SerializeField] private Sprite moneySprite;
+        [SerializeField] private Transform shopParent;
 
-        [SerializeField] private Inventory inventory;
+        private InventoryController inventoryController;
+        private MoneyController moneyController;
+
+        private void Awake()
+        {
+            inventoryController = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>();
+            moneyController = GameObject.FindGameObjectWithTag("Player").GetComponent<MoneyController>();
+        }
 
         private void Start()
         {
@@ -25,7 +31,7 @@ namespace DigThemGraves
         {
             foreach (ItemTemplate item in shopItems)
             {
-                GameObject itemObject = Instantiate(shopItemPrefab, shopContainer);
+                GameObject itemObject = Instantiate(shopItemPrefab, shopParent);
 
                 itemObject.GetComponent<Button>().onClick.AddListener(() => OnShopItemButtonClick(item));
 
@@ -37,23 +43,16 @@ namespace DigThemGraves
                 itemObject.transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = item.Cost.ToString();
 
                 //Money sprite
-                itemObject.transform.GetChild(3).GetComponent<Image>().sprite = moneySprite;
+                itemObject.transform.GetChild(3).GetComponent<Image>().sprite = moneyController.Sprite;
             }
         }
 
-        // logika chyba do kontrolera
         public void OnShopItemButtonClick(ItemTemplate item)
         {
-            if (inventory.IsFull)
+            if (moneyController.CanAfford(item.Cost))
             {
-                Debug.Log("No space for the item");
-                return;
-            }
-            if (inventory.Money.CanAfford(item.Cost))
-            {
-                inventory.Money.SubtractMoney(item.Cost);
-                inventory.AddItem(item);
-                Debug.Log("Bought item " + item.Name);
+                moneyController.SubtractMoney(item.Cost);
+                inventoryController.AddItem(item);
             }
             else
             {
