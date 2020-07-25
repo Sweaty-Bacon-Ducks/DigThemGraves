@@ -86,7 +86,6 @@ namespace DigThemGraves
                     .Subscribe(
                         onNext: sec =>
                         {
-                            Debug.Log($"Construction time elapsed: {sec}, Time remaining {BuildTime - ((sec + 1) / 10f)}");
                             buildTimeRemainingReactiveProperty.SetValueAndForceNotify(BuildTime - ((sec + 1) / 10f));
                         },
                         onCompleted: () =>

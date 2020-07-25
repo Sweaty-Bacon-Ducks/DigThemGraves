@@ -5,7 +5,7 @@ public static class GraphEditorNodeFactory
     public static IGraphEditorNode Create(NodeType nodeType, Vector2 position, bool resizable = false)
     {
         Debug.Log($"Node Position: {position}");
-        IGraphEditorNode createdNode = EmptyNode.Instance; ;
+        IGraphEditorNode createdNode = EmptyNode.Instance;
         switch (nodeType)
         {
             case NodeType.Text:

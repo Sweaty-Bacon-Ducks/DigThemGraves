@@ -1,7 +1,6 @@
 ﻿using AbstractionLib.QuestSystem;
-using DigThemGraves;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using UniRx;
 using UnityEngine;
 
 public class QuestController : MonoBehaviour, IQuestRepository
@@ -22,6 +21,11 @@ public class QuestController : MonoBehaviour, IQuestRepository
         questRepository.AddQuest(incomingQuest);
     }
 
+    public void AddManyQuests(IEnumerable<IQuest> incomingQuests)
+    {
+        questRepository.AddManyQuests(incomingQuests);
+    }
+
     public void Reset()
     {
         questRepository.Reset();
@@ -31,4 +35,5 @@ public class QuestController : MonoBehaviour, IQuestRepository
     {
         questRepository = new Quests();
     }
+
 }

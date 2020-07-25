@@ -75,7 +75,7 @@ public abstract class ReactiveQuest : MonoBehaviour, IReactiveQuest
 
     public IQuest MakeAvailable()
     {
-        return quest.MakeActive();
+        return quest.MakeAvailable();
     }
 
     public IQuest MakeFailed()
@@ -94,8 +94,21 @@ public abstract class ReactiveQuest : MonoBehaviour, IReactiveQuest
 
         WhenActivated.Subscribe((_) => MakeActive());
         WhenAvailable.Subscribe((_) => MakeAvailable());
-        WhenFinished.Subscribe((_) => MakeFinished());
-        //TODO: Zabronić zmiany stanu gdy quest jest ukończony
-        WhenFailed.Subscribe((_) => MakeFailed());
+        WhenFinished.Subscribe((_) =>
+        {
+            if (IsActive)
+            {
+                Debug.Log("good boi");
+                MakeFinished();
+            }
+        });
+        WhenFailed.Subscribe((_) =>
+        {
+            if (!IsFinished && IsActive)
+            {
+                Debug.Log("u fucked up");
+                MakeFailed();
+            }
+        });
     }
 }

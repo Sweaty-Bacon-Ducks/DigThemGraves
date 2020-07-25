@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 using System.Linq;
 using UniRx;
-using System.Collections.Generic;
 
 namespace DigThemGraves
 {
@@ -9,7 +8,6 @@ namespace DigThemGraves
         IController<Graveyard>,
         IModelProxy<Graveyard>
     {
-
         private Graveyard model;
         public Graveyard Model
         {
