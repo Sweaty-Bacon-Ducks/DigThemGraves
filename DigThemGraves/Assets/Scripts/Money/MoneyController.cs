@@ -2,17 +2,17 @@
 
 namespace DigThemGraves
 {
-    public class MoneyController : MonoBehaviour, IPresenter<MoneyModel>
+    public class MoneyController : MonoBehaviour, IController<Money>
     {
-        private MoneyModel _model;
-        public MoneyModel Model => _model;
+        private Money _model;
+        public Money Model => _model;
 
         [SerializeField] private Sprite moneySprite;
         public Sprite Sprite => Model.Sprite;
 
         private void Awake()
         {
-            _model = new MoneyModel(moneySprite);
+            _model = new Money(moneySprite);
         }
 
         public bool CanAfford(float amount)

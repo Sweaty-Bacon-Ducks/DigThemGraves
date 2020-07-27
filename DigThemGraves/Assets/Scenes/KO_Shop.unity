@@ -121,12 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!224 &119918178 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 4398351421818854113, guid: 7884fea7a55f04f48a125269b8825419,
-    type: 3}
-  m_PrefabInstance: {fileID: 305499915820832046}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &126560365 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 9077933549242871865, guid: 7884fea7a55f04f48a125269b8825419,
@@ -883,7 +877,7 @@ PrefabInstance:
         type: 3}
       propertyPath: itemsParent
       value: 
-      objectReference: {fileID: 119918178}
+      objectReference: {fileID: 0}
     - target: {fileID: 2712595154583970233, guid: 7884fea7a55f04f48a125269b8825419,
         type: 3}
       propertyPath: itemSlots.Array.data[0]

@@ -1,10 +1,12 @@
 ﻿using TMPro;
+using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace DigThemGraves
 {
-    public class ShopView : MonoBehaviour
+    //TODO: Separate this script to MVC when upgrading shop functionality
+    public class Shop : MonoBehaviour
     {
         [Tooltip("Items available for sale")]
         [SerializeField] private ItemTemplate[] shopItems;
@@ -33,7 +35,10 @@ namespace DigThemGraves
             {
                 GameObject itemObject = Instantiate(shopItemPrefab, shopParent);
 
-                itemObject.GetComponent<Button>().onClick.AddListener(() => OnShopItemButtonClick(item));
+                itemObject.GetComponent<Button>()
+                    .onClick
+                    .AsObservable()
+                    .Subscribe(_ => OnShopItemButtonClick(item));
 
                 //ItemSprite
                 itemObject.transform.GetChild(0).GetComponent<Image>().sprite = item.Sprite;

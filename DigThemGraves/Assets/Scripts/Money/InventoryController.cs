@@ -1,39 +1,35 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using System.Linq;
 using UniRx;
 using UnityEngine;
 
 namespace DigThemGraves
 {
-    public class InventoryController : MonoBehaviour
+    public class InventoryController : MonoBehaviour, IController<Inventory>
     {
-        private InventoryModel model;
+        private Inventory model;
+        public Inventory Model => model;
 
         [SerializeField]
         private InventoryView view;
 
-        public ItemInstance GetItemAt(int i) => model.items[i];
-        public ReactiveCollection<ItemInstance> GetItems => model.items;
+        public ItemInstance GetItemAt(int i) => Model.items[i];
+        public List<ItemInstance> GetItems => Model.items.ToList();
 
         private void Awake()
         {
-            model = new InventoryModel();
+            model = new Inventory();
         }
 
-        public bool AddItem(ItemTemplate item)
+        public void AddItem(ItemTemplate item)
         {
-            if (model.AddItem(item))
-            {
-                RefreshUI();
-                return true;
-            }
-
-            return false;
+            Model.AddItem(item);
+            RefreshUI();
         }
 
         public bool RemoveItem(ItemInstance item)
         {
-            if (model.RemoveItem(item))
+            if (Model.RemoveItem(item))
             {
                 RefreshUI();
                 return true;
@@ -44,7 +40,7 @@ namespace DigThemGraves
 
         public void RefreshUI()
         {
-            view.RefreshUI();
+            view.DrawView();
         }
     }
 }

@@ -16,11 +16,10 @@ namespace DigThemGraves
 
         private void Start()
         {
-            // TODO: RefreshUI won't work if an item changes but count stays the same
-            controller.GetItems.ObserveCountChanged().Subscribe(_ => RefreshUI());
+            controller.Model.ItemsCountAsObservable().Subscribe(_ => DrawView());
         }
 
-        public void RefreshUI()
+        public void DrawView()
         {
             ClearView();
 
