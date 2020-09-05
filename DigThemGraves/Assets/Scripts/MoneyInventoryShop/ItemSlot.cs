@@ -15,21 +15,20 @@ namespace DigThemGraves
             get { return _item; }
             set
             {
+                GetComponent<Button>().OnClickAsObservable()
+                .Subscribe(_ => inventory.RemoveItem(Item));
+
                 _item = value;
 
                 image.sprite = _item.Sprite;
             }
         }
 
-        public void Initialize(ItemInstance item)
+
+        private void Awake()
         {
             inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>();
             image = GetComponent<Image>();
-
-            GetComponent<Button>().OnClickAsObservable()
-                .Subscribe(_ => inventory.RemoveItem(Item));
-
-            Item = item;
         }
     }
 }

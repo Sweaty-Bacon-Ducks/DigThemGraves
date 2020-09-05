@@ -26,7 +26,7 @@ namespace DigThemGraves
             for (int i = 0; i < controller.GetItems.Count; i++)
             {
                 ItemSlot itemSlot = Instantiate(itemSlotPrefab, itemSlotParent);
-                itemSlot.Initialize(controller.GetItemAt(i));
+                itemSlot.Item = controller.GetItemAt(i);
                 itemSlots.Add(itemSlot);
             }
         }

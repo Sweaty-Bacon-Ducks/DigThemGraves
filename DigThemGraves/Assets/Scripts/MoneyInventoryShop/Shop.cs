@@ -10,18 +10,18 @@ namespace DigThemGraves
     {
         [Tooltip("Items available for sale")]
         [SerializeField] private ItemTemplate[] shopItems;
-
         [SerializeField] private GameObject shopItemPrefab;
-
         [SerializeField] private Transform shopParent;
 
+        [SerializeField] private GameObject Player;
+        
         private InventoryController inventoryController;
         private MoneyController moneyController;
 
         private void Awake()
         {
-            inventoryController = GameObject.FindGameObjectWithTag("Player").GetComponent<InventoryController>();
-            moneyController = GameObject.FindGameObjectWithTag("Player").GetComponent<MoneyController>();
+            inventoryController = Player.GetComponent<InventoryController>();
+            moneyController = Player.GetComponent<MoneyController>();
         }
 
         private void Start()
@@ -52,7 +52,7 @@ namespace DigThemGraves
             }
         }
 
-        public void OnShopItemButtonClick(ItemTemplate item)
+        private void OnShopItemButtonClick(ItemTemplate item)
         {
             if (moneyController.CanAfford(item.Cost))
             {

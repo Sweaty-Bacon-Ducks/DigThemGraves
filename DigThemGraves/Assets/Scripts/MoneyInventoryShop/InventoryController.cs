@@ -24,23 +24,16 @@ namespace DigThemGraves
         public void AddItem(ItemTemplate item)
         {
             Model.AddItem(item);
-            RefreshUI();
         }
 
         public bool RemoveItem(ItemInstance item)
         {
             if (Model.RemoveItem(item))
             {
-                RefreshUI();
                 return true;
             }
 
             return false;
-        }
-
-        public void RefreshUI()
-        {
-            view.DrawView();
         }
     }
 }
